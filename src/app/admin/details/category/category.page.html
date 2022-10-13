@@ -1,0 +1,66 @@
+<ion-header mode="ios">
+  <ion-toolbar  style="--background:#fff;">
+    <div class="back-btn-area">
+      <ion-buttons slot="start">
+        <ion-back-button text="{{ 'back' | translate }}" mode="ios" class="header-back-button" defaultHref="/"></ion-back-button>
+        <ion-title mode="ios">{{ 'CATEGORY_DETAIL.page_name' | translate }} : {{ category.name }}</ion-title>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="card-body">
+    <ion-card-content class="ion-no-margin ion-no-padding">
+        <ion-item lines="none">
+          <ion-label position="fixed">{{ 'CATEGORY_DETAIL.category_name' | translate }}</ion-label>
+          <ion-label>{{ category.name }}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label position="fixed">{{ 'CATEGORY_DETAIL.type' | translate }}</ion-label>
+          <ion-label>{{ 'RESTAURANT.' + category.type_id | translate }}</ion-label>
+        </ion-item>
+    </ion-card-content>
+
+
+    <div class="profilepic-border ion-no-margin ion-no-padding" style="text-align: -webkit-center !important;">
+      <div class="insidepic">
+        <ion-img *ngIf="category?.image_url" (click)="selectImageSource()" [src]="category?.image_url"></ion-img>
+      </div>
+      <ion-button fill="solid" class="profilebutton ion-no-margin ion-no-padding" Expand="block" (click)="selectImageSource()">
+        <ion-icon color="primary" name="camera"></ion-icon>
+      </ion-button>
+    </div>
+
+
+    <ion-card-content class="ion-no-margin ion-no-padding ion-padding-top">
+      <ion-grid class="ion-no-margin ion-no-padding">
+        <ion-row class="ion-no-margin ion-no-padding">
+          <ion-col class="ion-no-margin ion-no-padding">
+            <ion-button fill="clear" class="home-btn" Expand="full"  (click)="editCategory()">
+              <ion-icon  color="primary" class="button-icon" name="pencil"></ion-icon>
+              <ion-label color="primary" class="text-icon" >{{ 'ITEM_DETAIL.edit' | translate }}</ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-body">
+    <ion-item lines="none" class="item-area">
+      <ion-label position="fixed" class="ref_area">{{ 'CATEGORY_DETAIL.ref_category' | translate }}</ion-label>
+      <ion-label [hidden]="!category.ref_category" class="ref_area">{{ category.ref_category }}</ion-label>
+      <ion-label [hidden]="category.ref_category" class="ref_area">{{ 'CATEGORY_DETAIL.manual_def' | translate }}</ion-label>
+      <ion-button [disabled]="!category.ref_category" (click)="showRef(category.ref_category)" fill="clear" size="large" class="btn-area">
+      <!-- Expand="full" -->
+        <ion-icon slot="icon-only" name="information-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label position="fixed" class="ref_area">{{ 'CATEGORY_DETAIL.create_at' | translate }}</ion-label>
+      <ion-label class="ref_area">{{ category.create_at.toDate() | date:'dd/MM/yyyy - HH:mm' }}</ion-label>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

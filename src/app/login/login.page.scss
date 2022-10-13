@@ -1,0 +1,62 @@
+.background-cafe-img{
+    background-image: url("/assets/backg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    height: 100%;
+  }
+
+  .flex-card{
+    height: 100%;
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+
+  .header-back-button{
+    color: var(--ion-color-primary);
+    --background-hover-opacity: 0.0;
+    --color-hover: var(--ion-color-primary);
+  }
+
+  .back-margin{
+    margin: 14px;
+  }
+
+  .card-body{
+    max-width: 680px;
+    width: 90%;
+    margin: 30px auto 0px auto;
+    border-radius: 25px;
+    box-shadow: none !important;
+    z-index: 100;
+  }
+
+  .input-form{
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-inline-start: 10px;
+    background-color: var(--ion-color-light);
+  }
+
+  .input-user{
+    padding-bottom: 7px;
+  }
+
+  .input-password{
+    padding-top: 7px;
+  }

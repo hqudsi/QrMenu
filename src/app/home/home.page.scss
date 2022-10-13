@@ -1,0 +1,97 @@
+.lang{
+  padding: 0px !important;
+  // width: 35%;
+  // margin: 25px auto 5px auto;
+  min-width: 195px;
+}
+
+
+.logo{
+  width: 85%;
+  min-width: 200px;
+  margin: 20px auto 5px auto;
+  z-index: 100;
+}
+
+.logo-btn{
+  height: fit-content;
+  --color-hover	:transparent;
+  --color-focused		:transparent;
+  color: transparent;
+  --color-activated	: transparent;
+  --background-hover	: transparent;
+  margin: 5px auto 15px auto;
+  width: 100%;
+}
+
+
+.card-body{
+  max-width: 680px;
+  width: 90%;
+  margin: 0px auto;
+  border-radius: 25px;
+  box-shadow: none !important;
+  z-index: 100;
+}
+
+
+.lang-icon{
+  font-weight: normal;
+  color:#505050 !important;
+  --color:#505050 !important;
+}
+
+.background-cafe-img{
+  background-image: url("/assets/backg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -o-filter: blur(6px);
+  -ms-filter: blur(6px);
+  height: 100%;
+}
+
+.flex-card{
+  height: 100%;
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.margin-top{
+  margin-top:25px;
+  margin-bottom:5px;
+}
+
+.margin-bottom{
+  margin-top: 5px;
+  margin-bottom:30px;
+}
+
+
+.home-btn{
+  margin: 0px;
+  padding: 0px;
+  font-size:20px;
+  font-weight: 600;
+  letter-spacing: 0px;
+  height: 65px;
+  --box-shadow:none;
+  border-top:2px solid var(--ion-color-light);
+}
+
+.between-border{
+  border-inline-end:2px solid var(--ion-color-light);
+}

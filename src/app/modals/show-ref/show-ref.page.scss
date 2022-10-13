@@ -1,0 +1,40 @@
+*{
+  padding: 0;
+  margin: 0;
+  --padding: 0;
+  --margin: 0;
+}
+
+ion-content{
+  --background:#fff;
+}
+.insidepic {
+  min-height: 244px;
+  min-width: 250px;
+}
+
+ion-img {
+  height: 244px;
+  max-height: 244px;
+  min-width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media only screen and (max-width: 480px) {
+  .mobile-media{
+    display: block;
+  }
+  .insidepic {
+    min-height: 148px;
+    min-width: 250px;
+  }
+
+  ion-img {
+    height: 148px;
+    max-height: 148px;
+    min-width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}

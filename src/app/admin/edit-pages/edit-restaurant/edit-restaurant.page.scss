@@ -1,0 +1,140 @@
+.back-btn-area{
+  max-width: 680px;
+  margin: auto;
+}
+
+.card-body{
+  max-width: 680px;
+  margin: 20px auto;
+  border-radius: 25px;
+  box-shadow: none !important;
+}
+
+
+ion-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+#profile::part(image){
+  max-height: 250px;
+  max-width: 250px;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 100%;
+}
+
+
+#cover::part(image){
+  height: 160px;
+  max-height: 160px;
+  width: 100%;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 0% !important;
+}
+#cover{
+  height: 100%;
+  width: 100%;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 0% !important;
+}
+
+.profilebutton{
+  z-index: +2;
+  margin: 0px;
+  width: 250px;
+  max-width: 250px;
+  --border-radius: 0px;
+  border-width: 0.55px;
+  border-style: solid;
+  border-color: var(--ion-color-step-150, rgba(0, 0, 0, 0.2));
+  --background: #fff;
+  --box-shadow: none;
+  --background-hover: var(--ion-color-primary);
+  --background-focused:var(--ion-color-primary);
+  --background-activated:var(--ion-color-primary);
+}
+.profilebutton-cover{
+  z-index: +2;
+  margin: 0px;
+  width: 90%;
+  max-width: 90%;
+  --border-radius: 0px;
+  border-width: 0.55px;
+  border-style: solid;
+  border-color: var(--ion-color-step-150, rgba(0, 0, 0, 0.2));
+  --background: #fff;
+  --box-shadow: none;
+  --background-hover: var(--ion-color-primary);
+  --background-focused:var(--ion-color-primary);
+  --background-activated:var(--ion-color-primary);
+}
+
+.insidepic {
+  height: 250px;
+  width: 250px;
+  --border-radius: 0px;
+  border-width: 0.55px 0.55px 0 0.55px;
+  border-style: solid;
+  border-color: var(--ion-color-step-150, rgba(0, 0, 0, 0.2));
+  background-color: #fff;
+  --box-shadow: none;
+}
+.insidepic-cover {
+  height: 160px;
+  width: 90%;
+  max-width: 90%;
+  --border-radius: 0px;
+  border-width: 0.55px 0.55px 0 0.55px;
+  border-style: solid;
+  border-color: var(--ion-color-step-150, rgba(0, 0, 0, 0.2));
+  background-color: #fff;
+  --box-shadow: none;
+}
+
+.profilepic{
+  width: 100%;
+  height: 100%;
+  border-color: transparent;
+}
+
+.profilepic-border{
+  margin-top: 15px;
+}
+
+
+
+.insidepic {
+  height: 250px;
+  width: 250px;
+  --border-radius: 0px;
+  border-width: 0.55px 0.55px 0 0.55px;
+  border-style: solid;
+  border-color: var(--ion-color-step-150, rgba(0, 0, 0, 0.2));
+  background-color: #fff;
+  --box-shadow: none;
+}
+
+.profilepic{
+  width: 100%;
+  height: 100%;
+  border-color: transparent;
+  --box-shadow: none;
+}
+
+.profilepic-border{
+  margin-top: 15px;
+  // background:  #dddddd ;
+}
+
+
+.pic-header{
+  font-size: 17px;
+  color:#000;
+  font-weight: 400;
+  text-transform: capitalize;
+}

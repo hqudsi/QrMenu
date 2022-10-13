@@ -1,0 +1,108 @@
+<ion-header mode="ios">
+  <ion-toolbar style="--background:#fff;">
+    <div class="back-btn-area">
+      <ion-buttons slot="start">
+        <ion-back-button text= '{{ "back" | translate }}' mode="ios"  class="header-back-button"  defaultHref="/"></ion-back-button>
+        <ion-title mode="ios">{{ 'MY_ITEMS.page_name' | translate }}</ion-title>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="item-page">
+    <div class="item-card" *ngFor="let item of myItems">
+    <ion-card class="card-body">
+      <ion-card-content class="container ion-padding-top">
+        <div (click)="showItem(item)">
+          <ion-img class="item-img" [src]="item.image_url"  *ngIf="item.active === true && item.image_url"></ion-img>
+          <ion-img class="item-img-disable" [src]="item.image_url"  *ngIf="item.active === false && item.image_url"></ion-img>
+          <ion-grid>
+            <ion-row>
+              <ion-col class="ion-text-start ion-text-capitalize">
+                <ion-label *ngIf="item.active === true" class="item-name">{{ item.name }}</ion-label>
+                <ion-label *ngIf="item.active === false" class="item-name">{{ item.name }} ({{'ITEM_DETAIL.unavailable' | translate}})</ion-label>
+              </ion-col>
+              <ion-col *ngIf="item.size" class="ion-no-padding ion-text-end ion-text-capitalize ion-align-self-center" style="max-width: fit-content;">
+                <ion-label>{{ item.size }}</ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <p>{{ item.description }}</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+            <ion-grid>
+            <ion-row>
+              <ion-col class="ion-text-start">
+                <div  *ngIf="item.discount_price > 0">
+                  <ion-label class="price-text">
+                    <ion-icon style="font-size: 20px; vertical-align: text-bottom; pointer-events:none" name="ticket-outline"></ion-icon>
+                    <!-- {{ 'MY_ITEMS.discount_price' | translate }} : -->
+                  </ion-label>
+                  <p class="Sale-price" title="Discounted selling price">{{ item.discount_price | number : '1.2-2'}}
+                    <span class="currency-symbol">{{ item.currency }}</span>
+                  </p>
+                </div>
+                <div *ngIf="!item.discount_price">
+                  <ion-icon style="font-size: 20px; vertical-align: text-bottom; pointer-events:none" name="pricetag-outline"></ion-icon>
+                  <ion-label class="price-text">
+                    <!-- {{ 'MY_ITEMS.price' | translate }} : -->
+                  </ion-label>
+                  <p class="Sale-price" title="{{ 'MY_ITEMS.price' | translate }}">{{ item.price | number : '1.2-2'}}
+                    <span class="currency-symbol">{{ item.currency }}</span>
+                  </p>
+                </div>
+              </ion-col>
+              <ion-col class="ion-text-start">
+                <div *ngIf="item.discount_price > 0">
+                  <ion-icon style="font-size: 20px; vertical-align: text-bottom; pointer-events:none" name="pricetag-outline"></ion-icon>
+                  <ion-label class="price-text">
+                    <!-- {{ 'MY_ITEMS.old_price' | translate }} : -->
+                  </ion-label>
+                  <p class="price_original" title="Original selling Price"> {{ item.price | number : '1.2-2'}}
+                    <span class="currency-symbol">{{ item.currency }}</span>
+                  </p>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+        <ion-card-content class="ion-no-margin ion-no-padding">
+          <ion-grid class="ion-no-margin ion-no-padding">
+            <ion-row class="ion-no-margin ion-no-padding">
+              <ion-col class="ion-no-margin ion-no-padding">
+                <ion-button fill="clear" class="home-btn between-border" Expand="full" (click)="changeActive(item)">
+                  <ion-icon *ngIf="item?.active" color="green" name="checkmark-circle"></ion-icon>
+                  <ion-label  class="text-icon"  color="green" *ngIf="item?.active">{{ 'ITEM_DETAIL.available' | translate }}</ion-label>
+                  <ion-icon *ngIf="!item?.active" color="danger" name="close-circle"></ion-icon>
+                  <ion-label  class="text-icon"   color="danger" *ngIf="!item?.active">{{ 'ITEM_DETAIL.unavailable' | translate }}</ion-label>
+                </ion-button>
+              </ion-col>
+              <ion-col class="ion-no-margin ion-no-padding">
+                <ion-button fill="clear" class="home-btn" Expand="full" (click)="changeShow(item)">
+                  <ion-icon *ngIf="item?.show" color="green" name="eye-outline" class="button-icon"></ion-icon>
+                  <ion-label class="text-icon" color="green" *ngIf="item?.show">{{ 'ITEM_DETAIL.show' | translate }}</ion-label>
+                  <ion-icon *ngIf="!item?.show" color="danger" name="eye-off-outline" class="button-icon"></ion-icon>
+                  <ion-label class="text-icon"  color="danger" *ngIf="!item?.show">{{ 'ITEM_DETAIL.hide' | translate }}</ion-label>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-footer mode="ios" style="height: 70px; border-top: 1px solid #cccccc;">
+  <ion-fab vertical="center" horizontal="center">
+    <ion-fab-button [routerLink]="['/admin/add-item']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-footer>

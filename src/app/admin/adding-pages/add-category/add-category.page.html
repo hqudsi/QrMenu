@@ -1,0 +1,85 @@
+<ion-header mode="ios">
+  <ion-toolbar class="top-toolbar">
+    <div class="back-btn-area">
+      <ion-buttons slot="start">
+        <ion-back-button text= '{{ "back" | translate }}' mode="ios"  class="header-back-button"  defaultHref="/"></ion-back-button>
+        <ion-title mode="ios">{{ 'ADD_CATEGORY.page_title' | translate }}</ion-title>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card-content class="ion-no-margin ion-no-padding ion-padding-top ion-padding-bottom">
+    <form  class="card-body" [formGroup]="credentials">
+
+      <div class="input-group">
+        <ion-item lines="none" mode="md">
+          <ion-label position="floating">{{ 'ADD_CATEGORY.category_name' | translate }}</ion-label>
+          <ion-input formControlName="name" type="text" name="name" placeholder="{{ 'ADD_CATEGORY.category_name_desc' | translate }}" required></ion-input>
+        </ion-item>
+        <div *ngIf="(credentials.get('name').dirty || credentials.get('name').touched)
+                  && credentials.get('name').errors" class="errors">
+        </div>
+      </div>
+
+      <div class="input-group">
+        <ion-item lines="none" mode="md">
+          <ion-label>{{ 'ADD_CATEGORY.type' | translate }}</ion-label>
+          <ion-select style="min-height: 64px;" cancelText="{{ 'CANCEL' | translate }}"  [disabled]="!types" formControlName="type_id" interface="action-sheet" mode="ios">
+            <ion-select-option *ngFor="let type of types" [value]="type.id">{{type.name | translate}}
+            </ion-select-option>
+          </ion-select>
+        </ion-item>
+        <div *ngIf="(credentials.get('type_id').dirty || credentials.get('type_id').touched)
+        && credentials.get('type_id').errors" class="errors">
+      </div>
+    </div>
+
+    <div class="input-group">
+      <ion-item lines="none" mode="md">
+        <ion-label position="floating">{{ 'ADD_CATEGORY.category_notes' | translate }}</ion-label>
+        <ion-input formControlName="notes" type="text" placeholder="{{ 'ADD_CATEGORY.category_notes_desc' | translate }}"></ion-input>
+      </ion-item>
+    </div>
+
+    <div class="input-group" *ngIf="userType === 4">
+      <ion-item lines="none">
+        <ion-label>{{ 'DEFUALT.defualt_category' | translate }}</ion-label>
+        <ion-checkbox mode="md" slot="start" formControlName="defualt_category"></ion-checkbox>
+      </ion-item>
+    </div>
+
+    <div class="input-group" *ngIf="userType === 4">
+      <ion-item lines="none">
+        <ion-label>{{ 'DEFUALT.selected_category' | translate }}</ion-label>
+        <ion-checkbox mode="md" slot="start" formControlName="selected_category"></ion-checkbox>
+      </ion-item>
+    </div>
+
+    </form>
+
+      <div class="profilepic-border ion-padding-top ion-padding-bottom" style="text-align: -webkit-center !important;">
+        <div class="insidepic">
+          <ion-img *ngIf="imageDataSource" (click)="selectImageSource()" [src]="imageDataSource"></ion-img>
+        </div>
+        <ion-button fill="solid" class="profilebutton" (click)="selectImageSource()">
+          <ion-icon color="primary" name="camera"></ion-icon>
+        </ion-button>
+      </div>
+
+
+
+    </ion-card-content>
+
+    <!-- <div class="ion-no-margin ion-no-padding">
+      <ion-button (click)="addCategory()" style="height: 60px;" class="ion-no-margin ion-no-padding"  ></ion-button>
+    </div> -->
+
+
+</ion-content>
+
+<ion-footer class="btn-footer ion-no-border">
+  <ion-button type="submit" style="height: 50px;" size="large" expand="full" fill="solid" (click)="addCategory()" shape="round" color="primary">{{ 'save' | translate }}</ion-button>
+</ion-footer>

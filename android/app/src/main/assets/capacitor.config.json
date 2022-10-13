@@ -1,0 +1,6 @@
+{
+	"appId": "ps.act.qrcafe",
+	"appName": "QRCafe",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

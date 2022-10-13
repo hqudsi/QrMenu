@@ -1,0 +1,7 @@
+{
+  "name": "qr-menu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

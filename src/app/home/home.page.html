@@ -1,0 +1,45 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+  <div class="background-cafe-img"></div>
+
+
+  <div class="flex-card">
+    <ion-card class="card-body">
+      <ion-list class="ion-no-margin ion-no-padding">
+        <ion-item lines="none" class="ion-no-margin lang">
+          <!-- <ion-label>{{ 'language' | translate }}</ion-label> -->
+          <ion-icon size="large" name="earth" slot="start" style="height: 36px;" class="lang-icon"></ion-icon>
+          <ion-select [value]="currenctLanguage" (ionChange)="languageChange($event)" mode="ios" interface="action-sheet">
+              <ion-select-option style="color:#000" value="en">{{ 'english' | translate }}</ion-select-option>
+              <ion-select-option value="ar">{{ 'arabic' | translate }}</ion-select-option>
+            </ion-select>
+        </ion-item>
+      </ion-list>
+      <div class="logo">
+        <ion-button class="logo-btn" fill="clear"  href="about">
+          <ion-img src="../assets/applogo.png"></ion-img>
+        </ion-button>
+        <h2 class="margin-top"> {{ 'HOME.Welcome' | translate }}</h2>
+        <h3 class="margin-bottom">{{ 'HOME.login_create' | translate }}</h3>
+        <!-- <p>{{ 'HOME.paragraph' | translate }}</p> -->
+      </div>
+        <ion-card-content class="ion-no-margin ion-no-padding">
+          <ion-grid class="ion-no-margin ion-no-padding">
+            <ion-row class="ion-no-margin ion-no-padding">
+              <ion-col>
+                <ion-button fill="clear" class="home-btn between-border" Expand="full" [routerLink]="['/login']">{{ 'HOME.login' | translate }}</ion-button>
+              </ion-col>
+              <ion-col>
+                <ion-button fill="clear" class="home-btn" Expand="full" [routerLink]="['/register']">{{ 'HOME.register' | translate }}</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+        </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

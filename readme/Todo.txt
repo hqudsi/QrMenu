@@ -1,0 +1,4 @@
+
+2. Fixed types and catgegory in resturant items. (for end user)
+3. Show/hide types. (by admin)
+4. Add mokabelat type (max 4). (by admin)

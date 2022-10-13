@@ -1,0 +1,382 @@
+{
+  "versionName": "0.0.12 ( Beta )",
+  "back": "رجوع",
+  "zoom-in": "تكبير",
+  "zoom-out": "تصغير",
+  "next": "التالي",
+  "language": "لغة العرض",
+  "arabic": "العربية",
+  "english": "English",
+  "logout": "تسجيل الخروج",
+  "close": "إغلاق",
+  "save": "حفظ",
+  "CANCEL": "إغلاق",
+  "Take_Photo": "إلتقاط صورة",
+  "Choose_Photos": "فتح ألبوم الصور",
+  "Select_Source": "إختيار مصدر الصورة",
+  "Delete_Photo": "إزالة الصورة",
+  "ok": "موافق",
+  "privacy": "سياسة الخصوصية",
+  "terms": "الشروط والأحكام",
+  "loading": "قيد التحميل...",
+  "select": "موافق",
+
+  "ALERTS": {
+    "no": "لا",
+    "yes" : "نعم",
+    "dismiss": "تخطي",
+    "error": "تنبيه",
+    "check_data": "الرجاء مراجعة البيانات المدخلة",
+    "done": "تم بنجاح",
+    "done_edit": "تم التعديل بنجاح",
+    "done_add_address": "تم إضافة العنوان",
+    "try_again": "حدث خطأ، حاول مرة اخرى",
+    "loading": "جاري التحميل ...",
+    "update_status": "تحديث البيانات",
+    "done_update": "تم تعديل البيانات بنجاح",
+    "add_item": "تمت عملية إضافة الصنف بنجاح",
+    "add_category": "تمت عملية إضافة المجموعة بنجاح",
+    "item_done_update": "تم تعديل بيانات الصنف بنجاح",
+    "category_done_update": "تم تعديل بيانات المجموعة بنجاح",
+    "done_change": "تم حفظ التعديلات",
+    "done_add": "تمت عملية الاضافة",
+    "done_complete_order": "تمت عملية إعداد الطلبية",
+    "code_error" : "الرمز غير صحيح",
+    "login_failed": "فشلت عملية تسجيل الدخول",
+    "login_error": "يرجى التحقق من البيانات المدخلة",
+    "user_not_active": "حساب المستخدم غير فعال",
+    "invalid_username_password": "البريد أو كلمة المرور المدخلة غير صحيحة",
+    "success_register": "تم إرسال الطلب بنجاح",
+    "you_can_log_in": "يمكنك تسجيل الدخول",
+    "company_not_found": "الشركة غير معرفة",
+    "email_mobile_used": "رقم الهاتف أو الإيميل مستعمل سابقاً",
+    "expired_request": "طلب منتهي الصلاحية",
+    "expired_request_wrong_id": "لم يتم العثور على سجل مطابق",
+    "expired_request_wrong_id_detail": "عذراً ، تم رفض الطلب",
+    "expired_request_detail": "عذراً ، لم نتمكن من استكمال طلبك، حاول مرة أخرى لاحقاً",
+    "done_delete" : "تم الحذف",
+    "done_delete_item" : "تم حذف الصنف بنجاح",
+    "confirmation": "حذف الصنف",
+    "confirmation_desc": "هل أنت متأكد من أنك تريد حذف هذا الصنف؟",
+    "reject_request": "رفض الطلب",
+    "reject_request_desc": "هل أنت متأكد من أنك تريد رفض هذا الطلب؟",
+    "required_fields": "يرجى تعبئة كامل الحقول المطلوبة",
+    "password_changed_Successfully": "تم تحديث كلمة المرور",
+    "wrong_old_password": "كلمة المرور السابقة خاطئة",
+    "error_change_password": "لا يمكن تعديل كلمة المرور، يرجى المحاولة لاحقا",
+    "password_not_match": "كلمة المرور غير متطابقة",
+    "upload_cover" : "جاري رفع صورة الغلاف الجديدة",
+    "upload_avatar" : "جاري رفع صورة الشعار الجديدة",
+    "check_users_data": "يرجى التحقق من تعبئة البريد الالكتروني وكلمة المرور بشكل صحيح"
+  },
+
+  "HOME": {
+    "login": "تسجيل الدخول",
+    "Welcome": "مرحبا,,",
+    "login_create": "قم بتسجيل الدخول او إنشاء حساب للمتابعة",
+    "paragraph": "انشئ مينيو QR لزيادة الأرباح وتقليل التكلفة",
+    "register": "إنشاء حساب"
+  },
+
+
+  "LOGIN": {
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور"
+  },
+  "REGISTER": {
+    "email": "البريد الالكتروني ( سيتم إرسال البيانات للبريد المدخل )",
+    "name": "إسم المالك",
+    "cafe_name": "إسم المطعم / الكافيه",
+    "phone": "رقم هاتف المالك ( مع المفتاح الدولي، مثال 970+ )",
+    "address": "عنوان المحل"
+  },
+
+
+  "RESTAURANT": {
+    "meals": "الوجبات",
+    "drinks": "المشروبات",
+    "desserts": "الحلويات",
+    "hookahs": "الأراجيل",
+    "oops": "للأسف!",
+    "oops_desc": "لا يوجد شيء لعرضه هنا ، حتى الآن",
+    "follow_us": "تابعنا",
+    "no_category": "لا توجد مجموعات"
+  },
+
+
+  "ABOUT": {
+    "about": "القدسي سنتر",
+    "app_version": "نسخة التطبيق",
+    "developer": "مزود التطبيق",
+    "address": "العنوان",
+    "address1": "فلسطين - الخليل - عين سارة",
+    "address2": "عمارة فندق كوين بلازا - الطابق الأول",
+    "email": "البريد الإلكتروني",
+    "facebook" : "صفحة الفيسبوك",
+    "contact_act": "تواصل معنا"
+  },
+
+  "PANEL": {
+    "my_profile": "إدارة الحساب",
+    "my_restaurant": "معلومات المتجر",
+    "my_categories": "المجموعات",
+    "my_items": "الأصناف",
+    "help": "المساعدة",
+    "maual": "دليل المستخدم",
+    "about": "حول التطبيق",
+    "privacy_policy": "سياسات الخصوصية",
+    "terms": "شروط الاستخدام /الخدمة",
+    "rate": "تقييم التطبيق",
+    "share": "مشاركة التطبيق",
+    "report": "الإبلاغ عن مشكلة",
+    "service_type": "نوع الإصدار",
+    "trial": "نسخة تجريبية",
+    "basic": "النسخة الأساسية",
+    "premium": "النسخة المميزة",
+    "business": "نسخة الأعمال",
+    "service_period": "فترة الخدمة",
+    "days": "يوم/ أيام",
+    "end_today": "تنتهي اليوم",
+    "expired": "منتهية",
+    "account_request": "طلبات الحسابات",
+    "accounts": "حسابات المطاعم"
+  },
+
+  "ADDITEM": {
+    "page_title": "إضافة صنف جديد",
+    "item_name": "إسم الصنف",
+    "item_name_desc": "الإسم الذي سيعرض للزبائن",
+    "brand": "brand",
+    "brand_desc": "brand_desc",
+    "description": "تفصيل (اختياري)",
+    "description_desc": "مكومات وتفاصيل اكثر عن الصنف",
+    "price": "السعر الأصلي",
+    "price_desc": "سعر البيع الأصلي للزبون",
+    "currency": "العملة",
+    "currency_desc": "رمز علمة البيع (NIS, $, €, JD)",
+    "quantity": "quantity",
+    "quantity_desc": "quantity_desc",
+    "size": "الحجم (اختياري)",
+    "size_desc": "كاسة وسط ، فنجان ، 250غم",
+    "category": "المجموعة",
+    "discount_price": "سعر الخصم (اختياري)",
+    "discount_price_desc": "السعر بعد الخصم ( سيقوم بالغاء سعر البيع الأصلي للصنف )",
+    "person_number": "عدد الأفراد (اختياري)",
+    "person_number_desc": "عدد الأفراد الذين تكفيهم هذه الوجبة",
+    "preparing_time": "وقت التحضير بالدقائق (اختياري)",
+    "preparing_time_desc": "الوقت اللازم لتحضير الوجبة بالدقائق",
+    "calories": "السعرات الحرارية (اختياري)",
+    "calories_desc": "كمية السعرات الحرارية في هذه الوجبة",
+    "min": "د",
+    "person": "شخص/ أشخاص",
+    "kcal": "سعره"
+  },
+
+  "ADD_CATEGORY": {
+    "page_title": "إضافة مجموعة جديدة",
+    "category_name": "إسم المجموعة",
+    "category_name_desc": "الإسم الذي سيعرض للزبائن",
+    "type": "التصنيف",
+    "category_notes": "ملاحظة المجموعة",
+    "category_notes_desc": "ستظهر للزبائن في شاشة أصناف المجموعة"
+  },
+
+  "CATEGORY_DETAIL": {
+    "page_name": "تفاصيل المجموعة",
+    "category_name":"إسم المجموعة",
+    "type":"التصنيف",
+    "ref_category": "مرجع المجموعة",
+    "manual_def": "معرف يدوياً",
+    "create_at": "تاريخ الإنشاء"
+  },
+  "ITEM_DETAIL": {
+    "page_name": "تفاصيل الصنف",
+    "item_name":"إسم الصنف",
+    "price":"السعر",
+    "discount_price":"سعر الخصم",
+    "currency":"العملة",
+    "description":"تفصيل",
+    "size":"الحجم",
+    "person_number":"عدد الأفراد",
+    "preparing_time":"وقت التحضير بالدقائق",
+    "calories":"السعرات الحرارية",
+    "edit": "تعديل",
+    "available": "متوفر",
+    "unavailable": "غير متوفر",
+    "show": "ظاهر",
+    "hide": "مخفي",
+    "delete": "حذف",
+    "ref_item": "مرجع الصنف",
+    "create_at": "تاريخ الإنشاء",
+    "category": "المجموعة",
+    "manual_def": "معرف يدوياً"
+  },
+  "EDIT_CATEGORY": {
+    "page_name": "تعديل المجموعة"
+  },
+  "EDIT_ITEM": {
+    "page_name": "تعديل الصنف"
+  },
+  "MY_CATEGORY": {
+    "page_name": "المجموعات",
+    "add_category": "إضافة مجموعة",
+    "reorder": "ترتيب المجموعات",
+    "import_category": "إستيراد مجموعة"
+  },
+  "MY_ITEMS": {
+    "page_name": "الأصناف",
+    "status" : "الحالة",
+    "price": "السعر",
+    "discount_price": "السعر بعد الخصم",
+    "old_price" : "السعر قبل الخصم",
+    "filter": "البحث والتصفية",
+    "all":"الكل",
+    "search": "بحث",
+    "add_item": "إضافة صنف",
+    "reorder": "ترتيب الأصناف",
+    "import_item": "إستيراد صنف"
+  },
+  "MY_PROFILE": {
+    "page_name": "إدارة الحساب",
+    "change_password": "تغير كلمة المرور",
+    "delete_account": "حذف الحساب"
+  },
+  "MY_RESTAURANT": {
+    "page_name": "معلومات المتجر",
+    "edit": "تعديل البيانات",
+    "public_view" : "شاشة الزبائن",
+    "qr_print": "طباعة QR"
+  },
+  "EDIT_CAFE": {
+    "page_name": "تعديل البيانات",
+    "name": "إسم المتجر",
+    "cafe_name_desc": "الإسم الظاهر للزبائن",
+    "phone": "الهاتف",
+    "phone_desc": "رقم الهاتف الظاهر للزبائن",
+    "address": "العتوان",
+    "address_desc": "العنوان الظاهر للزبائن",
+    "wifi": "WiFi",
+    "facebook": "الفيسبوك (اختياري)",
+    "whatsapp": "الوتساب (اختياري)",
+    "instagram": "الانستغرام (اختياري)",
+    "snapchat": "سناب شات (اختياري)",
+    "tiktok": "تيك توك (اختياري)",
+    "website": "الموقع الالكتروني (اختياري)",
+    "facebook_desc": "رابط صفحة المتجر على الفيسبوك، مثال: https://www.facebook.com/actpsco",
+    "whatsapp_desc": "مع المقدمة الدولية بدون (+)، مثال :970594560918",
+    "instagram_desc": "رابط الحساب مثال : https://www.instagram.com/actpsco",
+    "snapchat_desc": "اسم المستخدم بدون (@) في المقدمة، مثال: actpsco",
+    "tiktok_desc": "اسم المستخدم بدون (@) في المقدمة، مثال: actpsco",
+    "website_desc": "أدخل رابط الموقع الالكتروني، مثال: www.act.ps",
+    "wifi_desc": "كلمة المرور للشبكة",
+    "logo_pic": "صورة الشعار",
+    "cover_pic": "صورة الغلاف"
+  },
+
+
+  "WEBSITE": {
+       "account": "المستخدم",
+       "motto": "بنقرة واحدة",
+       "contact" : "تواصل معنا",
+       "demo" : "نسخة العرض",
+       "OUTLOOK_SECTION": {
+         "tilte" : "بمظهر عصري",
+         "subtitle": "لم تعد بحاجة إلى لوائح الطعام التقليدية بعد اليوم!",
+         "paragraph": "نقدم لك خدمة لائحة الطعام الرقمية بتكلفة معقولة، إذ يمكنك عرض أصناف الطعام بسهولة ويسر. وبإمكان زبائنك الوصول إلى لوائح الطعام من خلال قراءة رمز QR الخاص  بمتجرك."
+       },
+       "FEATURES": {
+         "section_tilte": "السمات والمزايا",
+         "web_tilte": "خدمة المتصفح",
+         "web_paragraph": "بمقدور زبائنك استعراض لائحة الطعام عبر المتصفح دون الحاجة إلى تحميل أي تطبيقات خاصة.",
+         "edit_tilte": "خاصية التحرير والتعديل السريع",
+         "edit_paragraph": "بإمكانك الآن تعديل وتحديث لائحة الطعام بصورةٍ مستمرةٍ وسلسة.",
+         "touchless_tilte": "لائحة طعام رقمية",
+         "touchless_paragraph": "تعد لائحة الطعام الرقمية بديلاً آمناً وصحياً للوائح التقليدية التي يتم تداولها بين الزبائن.",
+         "star_tilte": "تصميم جذاب",
+         "star_paragraph": "اخترنا لك تصميماً مميزاً ومؤثراً في نفوس زبائنك ليكون مدعاةً لفخرك.",
+         "note": "ليس هذا وحسب، سيضاف عددٌ من المزايا لاحقاً."
+       },
+       "DISPLAY": {
+         "section_tilte": "أين يمكنني عرض رمز QR؟",
+         "section_paragraph": "إليك بعض الأماكن المقترحة لعرض رمز QR في متجرك.",
+         "Table": "ملصق على الطاولة",
+         "holder": "حاملة اللوائح",
+         "card": "بطاقة العمل",
+         "door": "بوابة المتجر"
+       },
+       "PRICING": {
+         "soon": "قريباً",
+         "section_tilte": "الأسعار",
+         "basic_tilte": "الأساسية",
+         "basic_period": "شهري",
+         "basic_first_feature": "لائحة طعام إلكترونية بأصناف ومجموعات لا محدودة",
+         "basic_second_feature": "امتيازات المدير مع لوحة التحكم",
+         "basic_third_feature": "تعديل الأصناف بسهولة ويسر",
+         "basic_fourth_feature": "تفاصيل متقدمة للوجبات",
+         "basic_fourth_feature_example": "(كالصور والمكونات وحجم الوجبة وغيرها)",
+         "basic_fifth_feature": "متوافق مع جميع الأجهزة الذكية",
+         "basic_fifth_feature_example": "(الهواتف، الحواسيب، الأجهزة اللوحية وغيرها)",
+         "basic_sixth_feature": "لغات عرض متعددة (عربي، انجليزي)",
+         "basic_sixth_feature_example": "(سيتوفر المزيد من اللغات قريباً)",
+         "basic_seventh_feature": "إضافة معلومات المتجر وصفحات مواقع التواصل الاجتماعي",
+         "basic_note": "الأسعار تشمل ض.ق.م",
+         "trial": "تجربة مجانية",
+         "premium_tilte": "المميزة",
+         "business_tilte": "التجارية"
+       },
+       "DIGITALIZE": {
+         "title": "هل تود رقمنة مشروعك؟",
+         "paragraph": "تواصل معنا الآن لتحصل على النسخة التجريبية مجاناً دون الحاجة إلى بطاقة ائتمان"
+       },
+       "FOOTER": {
+         "about": "من نحن",
+         "paragraph_first": "تأسست شركة Artistic Code Technologies في أواخر عام 2020، ويديرها مجموعةٌ من المبرمجين والخبراء في مجالي البرمجة والحلول الذكية.",
+         "paragraph_second": "وتهدف شركة ACT إلى توسيع وتطبيع استخدام البرمجيات الحديثة في مختلف قطاعات الأسواق المحلية والإقليمية.",
+         "phone": "560-918 (594) 970+",
+         "address": "عمارة كوين بلازا - شارع عين سارة، الخليل، 00712، فلسطين",
+         "social": "تابعنا",
+         "copy": "جميع الحقوق محفوظة."
+       }
+    },
+    "CHANGE_PASSWORD": {
+      "page_title": "تغيير كلمة المرور",
+      "old_password": "كلمة المرور السابقة ",
+      "new_password": "كلمة المرور الجديدة",
+      "confirmPassword": "تأكيد كلمة المرور"
+    },
+    "REORDER": {
+      "categories": "ترتيب المجموعات",
+      "items": "ترتيب الأصناف",
+      "select_category": "إختيار المجموعة",
+      "multi_notes": "الأصناف التي تنتمي الى أكثر من مجموعة واحدة لا يمكن إعادة ترتيب موضعها، ولن تظهر على هذه الشاشة",
+      "multi_cat_item": "في حال اختيار عدة مجموعات، لا يمكن إعادة ترتيب الصنف داخل المجموعات"
+    },
+    "DEFUALT": {
+      "defualt_category": "مجموعة افتراضية",
+      "selected_category": "مجموعة اختيارية",
+      "defualt_item": "صنف افتراضي",
+      "selected_item": "صنف اختياري"
+    },
+    "IMPORT_CATEGORY": {
+      "page_title": "إستيراد مجموعة",
+      "empty_category_import": "المجموعات المستوردة سابقاً سيتم إخفائها من هذه الشاشة"
+    },
+    "IMPORT_ITEM": {
+      "page_title": "إستيراد صنف",
+      "empty": "لا توجد أصناف للاستيراد",
+      "title": "الإسم",
+      "price": "السعر",
+      "empty_item_import": "الأصناف المستوردة سابقاً سيتم إخفائها من هذه الشاشة"
+    },
+    "REF_ITEM": {
+      "page_title": "مرجع الصنف",
+      "ref_name": "الإسم",
+      "ref_category": "المجموعة",
+      "ref_price": "السعر"
+    },
+    "REF_CATEGORY": {
+      "page_title": "مرجع المجموعة",
+      "ref_name": "الإسم",
+      "ref_type": "النوع"
+    }
+  }

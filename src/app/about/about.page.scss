@@ -1,0 +1,81 @@
+
+  .logo{
+    width: 75%;
+    max-width: 250px;
+    margin: 5px auto 5px auto;
+    z-index: 100;
+  }
+
+  .actLogo {
+    width: 65%;
+    max-width: 90px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+    min-width: 100px;
+    max-width: 300px;
+  }
+
+  ion-content{
+    --background: url("/assets/backg.jpg") no-repeat center center / cover;
+  }
+
+  .flex-card{
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+
+
+  .header-back-button{
+    color: var(--ion-color-primary);
+    --background-hover-opacity: 0.0;
+    --color-hover: var(--ion-color-primary);
+  }
+
+  .back-margin{
+    margin: 14px 14px 0px 14px;
+  }
+
+
+  .card-body{
+    max-width: 680px;
+    width: 90%;
+    margin: 10px auto;
+    border-radius: 25px;
+    box-shadow: none !important;
+    z-index: 100;
+    height: fit-content;
+  }
+
+  ion-card-title{
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  ion-card-subtitle{
+    text-transform:capitalize;
+    font-weight: bold;
+  }
+
+  .whatsapp{
+    border-radius: 100%;
+    padding: 5px 5px 5px 6px;
+    background-color: #128C7E;
+  }
+
+  .act_name{
+    text-transform: capitalize;
+    color: #00a2a3;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 2px auto 30px auto;
+  }
+
+  .lang_class{
+    height: 100%;
+    width: 100%;
+  }

@@ -1,0 +1,30 @@
+<ion-header mode="ios">
+  <ion-toolbar style="--background:#fff;">
+    <div class="back-btn-area">
+      <ion-buttons slot="start">
+        <ion-back-button text= '{{ "back" | translate }}' mode="ios"  class="header-back-button"  defaultHref="/"></ion-back-button>
+        <ion-title mode="ios">{{ 'account_request' | translate }}</ion-title>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let request of requests">
+    <ion-item>
+      <ion-label>
+       {{ request.cafe_name }}
+      </ion-label>
+      <ion-label>
+        {{ request.created_at.toDate() | date:'dd/MM/yyyy - HH:mm'}}
+      </ion-label>
+      <ion-button color="success" (click)="accept(request.id)">
+        accept
+      </ion-button>
+      <ion-button color="danger" (click)="reject(request.id)">
+        reject
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

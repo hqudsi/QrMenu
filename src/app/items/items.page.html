@@ -1,0 +1,224 @@
+<ion-header class="ion-no-border" #segmentcontrol>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true" [scrollEvents]="true" (ionScroll)="logScrolling($event)" [appStickySegment]="segmentcontrol">
+
+  <div class="back-btn">
+    <ion-toolbar class="ion-no-padding back-btn-toolbar">
+      <ion-buttons slot="start" class={{backBtnStyle}}>
+        <ion-back-button color="danger" text='{{ "back" | translate }}' mode="ios" class="hover-backg" defaultHref="/">
+        </ion-back-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </div>
+
+  <div class="item-page">
+    <div class="cover-profile">
+      <div class="cover" [ngStyle]="{'background-image': 'url(' + cafeData?.cover_url + ')'}" *ngIf="cafeData?.cover_url"></div>
+      <div class="cover" [ngStyle]="{'background-image': 'url(../assets/img/blank-cover.png)'}" *ngIf="!cafeData?.cover_url"></div>
+      <div class="avatar">
+        <ion-img class="avatar-img" [src]="cafeData?.avatar_url" *ngIf="cafeData?.avatar_url"></ion-img>
+        <ion-img class="avatar-img" src="/assets/img/blank-profile.png" *ngIf="!cafeData?.avatar_url"></ion-img>
+      </div>
+    </div>
+
+    <ion-card class="card-body">
+      <ion-card-header class="ion-no-padding">
+        <ion-segment mode="md" [(ngModel)]="segment" swipeGesture="false" (ionChange)="changeSegment(segment)">
+          <ion-segment-button value="meals" style="min-width: 25%;" >
+            <ion-icon style="font-size: 25px;" name="restaurant-outline"></ion-icon>
+            <ion-label style="font-size: 12px;">{{'RESTAURANT.meals' | translate}}</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="drinks" style="min-width: 25%;" >
+            <ion-icon style="font-size: 25px;" name="cafe-outline"></ion-icon>
+            <ion-label style="font-size: 12px;">{{'RESTAURANT.drinks' | translate}}</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="desserts" style="min-width: 25%;" >
+            <ion-icon style="font-size: 25px;" name="ice-cream-outline"></ion-icon>
+            <ion-label style="font-size: 12px;">{{'RESTAURANT.desserts' | translate}}</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="hookahs" style="min-width: 25%;" >
+            <svg [style.fill]="segment=='hookahs'? '#3880ff':'#000000b3'" xmlns="http://www.w3.org/2000/svg" version="1.0" width="24.000000pt" height="24.000000pt" viewBox="0 0 24.000000 24.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,24.000000) scale(0.004687,-0.004687)" stroke="none"><path d="M1906 4744 c-19 -18 -19 -28 -6 -114 12 -70 62 -188 106 -245 l26 -35 -180 0 c-215 0 -218 -1 -209 -87 12 -111 83 -215 183 -264 46 -23 60 -24 262 -27 l212 -3 0 -143 0 -143 -112 -7 c-190 -11 -377 -61 -548 -146 -321 -161 -539 -425 -627 -758 -34 -131 -43 -381 -19 -522 30 -170 104 -355 199 -495 59 -86 193 -222 285 -288 100 -72 239 -145 367 -192 55 -20 102 -38 103 -40 2 -2 -10 -24 -28 -50 -77 -112 -163 -325 -176 -438 l-7 -57 -93 0 c-123 0 -124 -2 -124 -165 0 -93 4 -126 16 -143 l15 -22 915 0 c612 0 922 3 935 10 17 10 19 23 19 153 0 98 -4 147 -12 155 -8 8 -47 12 -108 12 l-97 0 -12 67 c-17 93 -65 235 -107 312 -19 36 -30 68 -24 71 8 5 210 27 298 33 20 2 31 -11 67 -73 37 -66 46 -75 74 -78 44 -5 63 14 59 56 l-3 35 250 164 c359 236 335 217 334 255 -1 48 -67 152 -99 156 -15 1 -147 -54 -335 -142 l-310 -143 -24 18 c-67 53 -119 -20 -71 -99 24 -39 29 -37 -115 -52 -60 -6 -132 -13 -160 -16 l-50 -5 -65 77 c-36 42 -82 91 -104 110 l-38 33 26 108 c14 59 28 134 32 165 l7 58 261 166 c143 92 276 178 294 191 45 34 42 65 -11 132 l-44 54 34 56 c53 88 75 170 80 301 10 235 -64 428 -232 609 -121 130 -314 248 -494 302 l-81 24 0 167 0 167 203 3 c196 3 203 4 252 30 59 30 130 104 151 154 8 20 20 60 25 91 9 45 8 59 -5 79 -16 23 -19 24 -196 26 l-180 3 34 48 c47 66 76 138 92 227 10 59 10 80 1 100 l-12 25 -542 3 c-482 2 -543 0 -557 -14z m990 -126 c-12 -62 -56 -140 -112 -198 l-57 -60 -269 0 -270 0 -52 54 c-52 55 -95 129 -114 199 l-10 37 445 0 446 0 -7 -32z m254 -392 c0 -30 -69 -103 -119 -124 -49 -22 -59 -22 -568 -22 -305 0 -532 4 -553 10 -47 13 -106 63 -130 111 l-20 39 695 0 c578 0 695 -2 695 -14z m-630 -410 l0 -154 -42 5 c-24 2 -49 6 -55 9 -10 2 -13 41 -13 149 l0 145 55 0 55 0 0 -154z m-222 -317 l-3 -71 -35 -12 c-20 -6 -44 -25 -57 -45 l-24 -35 3 -387 3 -387 24 -26 c13 -14 39 -29 58 -32 l33 -6 0 -202 0 -201 -45 -24 c-40 -21 -48 -22 -59 -10 -8 8 -102 111 -211 229 -108 118 -207 219 -220 224 -12 5 -30 6 -39 3 -8 -3 -65 -68 -125 -144 -78 -97 -110 -146 -111 -165 0 -24 30 -47 308 -235 l308 -207 18 -101 c10 -55 25 -120 32 -145 l14 -45 -68 -68 c-78 -79 -74 -79 -221 -22 -237 90 -413 212 -546 378 -295 368 -326 904 -74 1286 204 310 581 506 997 520 l43 1 -3 -71z m458 -23 c116 -47 200 -96 289 -167 259 -209 362 -547 245 -806 l-30 -65 -27 34 c-65 79 -61 81 -304 -182 -116 -127 -216 -230 -221 -230 -5 0 -22 7 -38 15 l-30 16 0 203 0 204 34 12 c18 6 44 22 57 36 l24 26 3 341 c2 188 0 366 -3 396 -8 63 -46 111 -89 111 -24 0 -26 3 -26 45 0 56 3 56 116 11z m-116 -511 l0 -345 -170 0 -170 0 0 345 0 345 170 0 170 0 0 -345z m-120 -654 l0 -188 -55 0 -55 0 0 188 0 189 55 0 55 0 0 -189z m-738 30 c13 -16 96 -108 186 -204 158 -171 163 -177 150 -201 l-13 -26 -237 158 -236 157 57 72 c31 40 59 72 63 73 4 0 17 -13 30 -29z m1438 -41 c30 -39 53 -74 51 -78 -3 -4 -104 -71 -225 -148 -194 -125 -223 -140 -233 -126 -7 9 -13 19 -13 23 0 5 358 399 363 399 2 0 27 -32 57 -70z m-656 -304 c62 -19 115 -60 133 -105 22 -51 12 -190 -22 -316 -15 -55 -29 -110 -32 -122 -4 -17 15 -40 89 -113 l93 -91 -200 5 c-172 4 -316 18 -429 42 l-28 6 62 63 c72 72 71 63 25 230 -19 71 -28 126 -29 190 -1 109 14 144 77 177 95 49 177 59 261 34z m1442 -443 c-4 -5 -121 -83 -259 -174 l-252 -166 -23 40 c-12 22 -20 43 -17 46 6 5 544 259 554 260 2 1 1 -2 -3 -6z m-1820 -368 c151 -28 340 -46 534 -51 l195 -4 42 -72 c47 -80 98 -211 117 -305 l14 -63 -620 0 -619 0 7 38 c12 68 56 196 91 267 54 107 122 205 143 205 10 0 53 -7 96 -15z m1124 -660 l0 -55 -835 0 -835 0 0 55 0 55 835 0 835 0 0 -55z"/></g></svg>
+            <ion-label style="font-size: 12px; margin:0px 0px 5px 0px;">{{'RESTAURANT.hookahs' | translate}}</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        </ion-card-header>
+        <ion-card-header class="padding-cat">
+        <ion-toolbar mode="ios" class="categories-toolbar ion-no-margin ion-no-padding">
+          <ion-buttons class="btn-content ion-no-margin ion-no-padding" slot="start">
+            <ion-button fill="solid" class="btn-content ion-no-margin ion-no-padding" (click)="goPrev()" [disabled]="currentCategoryIndex === 0">
+              <ion-icon class="arrow-size" slot="icon-only" name="chevron-back"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-card-title class="category-name ion-align-items-center ion-justify-content-center" *ngIf="categories.length">{{ category.name }}</ion-card-title>
+          <ion-card-title class="category-name ion-align-items-center ion-justify-content-center" *ngIf="!categories.length">{{ 'RESTAURANT.no_category' | translate }}</ion-card-title>
+          <ion-buttons class="btn-content ion-no-margin ion-no-padding" slot="end">
+            <ion-button fill="solid" class="btn-content ion-no-margin ion-no-padding" (click)="goNext()" [disabled]="categories.length === 0 || currentCategoryIndex === categories.length - 1">
+              <ion-icon class="arrow-size" slot="icon-only" name="chevron-forward"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-card-header>
+
+
+      <div *ngIf="category?.notes" class="note">{{ category.notes }}</div>
+      <div *ngIf="!category?.notes" class="no-note"></div>
+
+      <ion-card-content class="container ion-padding-top">
+        <!-- before items load -->
+        <div *ngIf="!items">
+          <ion-card class="item-card" *ngFor="let i of [].constructor(3)">
+            <ion-skeleton-text animated style="width: 100%;margin: auto;height: 200px;"></ion-skeleton-text>
+            <ion-card-content class="no-top-padding">
+              <ion-grid>
+                <ion-row>
+                  <ion-col class="ion-text-start ion-text-capitalize">
+                    <ion-skeleton-text animated style="width: 45%;height: 25px;"></ion-skeleton-text>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col class="ion-text-start ion-text-capitalize">
+                    <ion-skeleton-text animated style="width: 80%;height: 25px;"></ion-skeleton-text>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <div>
+                      <ion-skeleton-text animated style="width: 100%;margin: auto;height: 25px;"></ion-skeleton-text>
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                      <ion-skeleton-text animated style="width: 100%;margin: auto;height: 25px;"></ion-skeleton-text>
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                      <ion-skeleton-text animated style="width: 100%;margin: auto;height: 25px;"></ion-skeleton-text>
+                    </div>
+                  </ion-col>
+                  <ion-col>
+                    <div>
+                      <ion-skeleton-text animated style="width: 100%;margin: auto;height: 25px;"></ion-skeleton-text>
+                    </div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+            <ion-card-content class="ion-no-padding ion-no-margin" style="min-height: 70px;">
+              <ion-row class="ion-text-center border-top ion-align-items-center" style="min-height: 70px !important;">
+                <ion-col>
+                  <ion-skeleton-text animated style="width: 80%;margin: auto;height: 25px;"></ion-skeleton-text>
+                </ion-col>
+                <ion-col>
+                  <ion-skeleton-text animated style="width: 80%;margin: auto;height: 25px;"></ion-skeleton-text>
+                </ion-col>
+              </ion-row>
+            </ion-card-content>
+          </ion-card>
+        </div>
+
+
+        <!-- after items load-->
+        <div class="item-card" *ngIf="items?.length === 0">
+          <p class="no-items">
+            <span class="oops">{{'RESTAURANT.oops' | translate}}</span>
+            {{'RESTAURANT.oops_desc' | translate}}
+          </p>
+        </div>
+        <ion-card class="item-card" *ngFor="let item of items">
+          <ion-img class="item-img" src="/assets/img/no_img.png" *ngIf="!item.image_url"></ion-img>
+          <ion-img class="item-img" [src]="item.image_url" *ngIf="item.active === true && item.image_url" (click)="openImage(item.image_url)"></ion-img>
+          <ion-img class="item-img-disable" [src]="item.image_url" *ngIf="item.active === false && item.image_url">
+          </ion-img>
+          <ion-card-content class="no-top-padding">
+            <ion-grid>
+              <ion-row>
+                <ion-col class="ion-text-start ion-text-capitalize">
+                  <ion-label *ngIf="item.active === true" class="item-name">{{ item.name }}</ion-label>
+                  <ion-label *ngIf="item.active === false" class="item-name">{{ item.name }}
+                    ({{'ITEM_DETAIL.unavailable' | translate}})</ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="ion-text-start">
+                  <p class="description-area">{{ item.description }}</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-grid>
+              <ion-row>
+                <ion-col *ngIf="item.size" class="ion-text-center">
+                  <div title="{{ 'ADDITEM.size' | translate }}">
+                    <ion-icon style="font-size: 20px; pointer-events:none; vertical-align: text-bottom;"
+                      name="cube-outline"></ion-icon>
+                    {{ item.size }}
+                  </div>
+                </ion-col>
+                <ion-col *ngIf="item.preparing_time" class="ion-text-center">
+                  <div title="{{ 'ADDITEM.preparing_time' | translate }}">
+                    <ion-icon style="font-size: 20px; pointer-events:none; vertical-align: text-bottom;"
+                      name="time-outline"></ion-icon>
+                    {{ item.preparing_time }} {{ 'ADDITEM.min' | translate }}
+                  </div>
+                </ion-col>
+                <ion-col *ngIf="item.person_number" class="ion-text-center">
+                  <div title="{{ 'ADDITEM.person_number' | translate }}">
+                    <ion-icon style="font-size: 20px; pointer-events:none; vertical-align: text-bottom;"
+                      name="person-outline"></ion-icon>
+                    {{ item.person_number }}
+                  </div>
+                </ion-col>
+                <ion-col *ngIf="item.calories" class="ion-text-center">
+                  <div title="{{ 'ADDITEM.calories' | translate }}">
+                    <ion-icon style="font-size: 20px;pointer-events:none; vertical-align: text-bottom;"
+                      name="flash-outline"></ion-icon>
+                    {{ item.calories }} {{ 'ADDITEM.kcal' | translate }}
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+          <ion-card-content class="ion-no-padding ion-no-margin" style="min-height: 70px;">
+            <ion-row class="ion-text-center border-top ion-align-items-center" style="min-height: 70px !important;">
+              <!-- price after disocunt-->
+              <ion-col *ngIf="item.discount_price > 0">
+                <p class="Sale-price">{{ item.discount_price | number : '1.2-2'}}
+                  <span class="currency-symbol">{{ item.currency }}</span>
+                </p>
+              </ion-col>
+              <ion-col>
+                <!-- price without discount-->
+                <div *ngIf="!item.discount_price">
+                  <p class="Sale-price">{{ item.price | number : '1.2-2'}}
+                    <span class="currency-symbol">{{ item.currency }}</span>
+                  </p>
+                </div>
+                <!-- price before disocunt-->
+                <div *ngIf="item.discount_price > 0">
+                  <p class="price_original"> {{ item.price | number : '1.2-2'}}
+                    <span class="currency-symbol">{{ item.currency }}</span>
+                  </p>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- fab placed to the bottom end -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="ion-fab-top" [ngClass]="{'ion-fab-top-active': top > 700}">
+    <ion-fab-button class="scroll-btn" (click)="scrollToTop()">
+      <div>
+        <ion-icon class="ion-no-padding ion-no-margin" style="font-size: 30px; margin: -10px;" color="medium" name="chevron-up-outline"></ion-icon>
+        <p class="ion-no-padding ion-no-margin"> top </p>
+      </div>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

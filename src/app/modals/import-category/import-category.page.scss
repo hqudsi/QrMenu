@@ -1,0 +1,71 @@
+.back-btn-area {
+  max-width: 680px;
+  margin: auto;
+}
+
+.card-body {
+  max-width: 680px;
+  margin: 15px 10px 15px 10px;
+  border-radius: 25px;
+  // box-shadow: none !important;
+}
+
+ion-list-header {
+  --background: #f1f1f1;
+}
+
+.note{
+  background-color: #faefcd;
+  border-inline-start: 9px solid #ffc409;
+  border-bottom: 0.5px solid #e9e9e9;
+  border-inline-end: 0.5px solid #e9e9e9;
+  border-radius: 8px;
+  padding: 10px 5px;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: pre-wrap;
+  max-width: 300px;
+  margin: 5px auto;
+}
+
+
+ion-list-header {
+  --background: #cbdeff;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  padding-inline-start: 45px !important;
+  ion-item {
+    background-color: transparent;
+    --background: transparent;
+    width: 100%;
+    text-align: center;
+    // --padding-end: 0px;
+    // --inner-padding-end: 0px;
+    ion-label {
+      margin-inline-end: 0px;
+    }
+    ion-icon {
+      --ionicon-stroke-width: 12px;
+      // color: #9f9f9f;
+    }
+  }
+}
+.check-group-icon {
+  color: #9f9f9f;
+}
+
+.check-group-button {
+  height: 90%;
+  padding-inline-end: 3px;
+  ion-icon {
+    --ionicon-stroke-width: 12px;
+    // color: #9f9f9f;
+  }
+}
+
+.footer-buttons {
+  padding: 0px 10px;
+}
+

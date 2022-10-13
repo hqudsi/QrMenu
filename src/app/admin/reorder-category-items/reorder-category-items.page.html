@@ -1,0 +1,54 @@
+<ion-header mode="ios">
+  <ion-toolbar style="--background:#fff;">
+    <div class="back-btn-area">
+      <ion-toolbar style="--background:#fff; --border-width: 0;">
+        <ion-buttons slot="start">
+          <ion-back-button text= '{{ "back" | translate }}' mode="ios"  class="header-back-button"  defaultHref="/"></ion-back-button>
+        </ion-buttons>
+        <ion-title mode="ios">{{ 'REORDER.items' | translate }}</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="save()" color="success">
+            <ion-icon slot="start" name="checkmark-done-outline"></ion-icon>
+            {{ 'save' | translate}}
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="note"> {{ 'REORDER.multi_notes' | translate }} </div>
+  <ion-card class="card-body" *ngIf="!items">
+    <ion-list>
+      <ion-item detail *ngFor="let i of [].constructor(5)">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated style="width: 55px;margin: auto;height: 55px;"></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h2><ion-skeleton-text animated style="width: 90%;height: 20px;"></ion-skeleton-text></h2>
+          <p><ion-skeleton-text animated style="width: 50%;height: 20px;"></ion-skeleton-text></p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card class="card-body">
+    <ion-list class="ion-no-margin ion-no-padding">
+      <ion-reorder-group (ionItemReorder)="doReorder($event)" disabled="false">
+        <ion-item lines="full" *ngFor="let item of items">
+          <ion-reorder slot="start"></ion-reorder>
+          <ion-thumbnail slot="start">
+            <ion-img src="/assets/img/blank-category.png"  *ngIf="!item.image_url"></ion-img>
+            <img [src]="item.image_url" *ngIf="item.image_url">
+          </ion-thumbnail>
+          <ion-label>
+            <h2 style="font-size: 18px; font-weight: 900;">{{item.name}}</h2>
+            <p style="font-size: 12px; font-weight: normal;">{{ item.description }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-reorder-group>
+    </ion-list>
+  </ion-card>
+
+</ion-content>

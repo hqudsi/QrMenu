@@ -1,0 +1,333 @@
+<!-- <ion-header mode="md">
+  <ion-toolbar class="header">
+    <ion-img src="../assets/applogo.png"></ion-img>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+<ion-toolbar class="ion-no-margin ion-no-padding website-toolbar">
+  <ion-buttons class="ion-no-margin ion-no-padding btns">
+    <ion-button id="change-user" style="--color:light;" fill="clear" class="user_class top-button">
+      <ion-icon style="font-size: 25px;"name="person-outline" class="ion-no-margin ion-no-padding"></ion-icon>
+      &nbsp;{{ 'WEBSITE.account' | translate }}
+    </ion-button>
+    <ion-button id="change-language" style="--color:light;" fill="clear" class="lang_class top-button">
+      <ion-icon style="font-size: 25px;" name="earth" class="ion-no-margin ion-no-padding"></ion-icon>
+      &nbsp;{{currenctLanguage}}
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-popover trigger="change-language" [arrow]="true" mode="ios" alignment="center">
+  <ng-template>
+    <ion-content>
+      <ion-list>
+        <ion-radio-group [value]="currenctLanguage" (ionChange)="radioChangeLanguage($event)" mode="ios">
+          <ion-item lines="full">
+            <ion-label>{{'english' | translate}}</ion-label>
+            <ion-radio slot="start" value="en"></ion-radio>
+          </ion-item>
+          <ion-item lines="none">
+            <ion-label>{{'arabic' | translate}}</ion-label>
+            <ion-radio slot="start" value="ar"></ion-radio>
+          </ion-item>
+        </ion-radio-group>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>
+
+<ion-popover trigger="change-user" [arrow]="true" mode="ios" alignment="center">
+  <ng-template>
+    <ion-content>
+      <ion-list>
+        <ion-item lines="full" [button]="true" [routerLink]="['/login']" (click)="dismissPopover()">
+          <ion-label>{{'HOME.login' | translate}}</ion-label>
+        </ion-item>
+        <ion-item lines="full" [button]="true" [routerLink]="['/register']" (click)="dismissPopover()">
+          <ion-label>{{'HOME.register' | translate}}</ion-label>
+        </ion-item>
+        <ion-item color="danger" lines="none" [button]="true" [detail]="false" (click)="dismissPopover()">
+          <ion-label>{{'close' | translate}}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ng-template>
+</ion-popover>
+
+  <div class="cover-img">
+    <ion-grid class="cover-text">
+      <ion-row>
+        <ion-col>
+          <div class="text"></div>
+          <ion-img src="../assets/applogo.png" class="logo-cover"></ion-img>
+          <p class="ion-text-center cover-subtext">{{ 'WEBSITE.motto' | translate }}</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-button shape="round" class="act-btn contact-btn-cover" href="https://api.whatsapp.com/send?phone=970594560918" target="_blank">
+            {{ 'WEBSITE.contact' | translate }}
+          </ion-button>
+        </ion-col>
+        <ion-col class="ion-text-center">
+          <ion-button fill="outline" shape="round" class="act-btn view-btn" href="/restaurant/OZHL70OleaAA2QSIM1RY" target="_blank">
+            {{ 'WEBSITE.demo' | translate }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="container">
+    <section class="new-section">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="ion-align-self-center" style="padding-inline-start: 16px;">
+            <div class="text-desc-info">
+              <h2 class="ion-no-padding ion-no-margin text-font-header-desc" style="color:#213438;">{{ 'WEBSITE.OUTLOOK_SECTION.tilte' | translate }}</h2>
+              <p class="ion-no-padding ion-no-margin text-font-p-desc">{{ 'WEBSITE.OUTLOOK_SECTION.subtitle' | translate }}</p>
+              <p class="text-sub-desc">{{ 'WEBSITE.OUTLOOK_SECTION.paragraph' | translate }}</p>
+            </div>
+          </ion-col>
+          <ion-col class="ion-align-self-center">
+            <div class="desc-info ion-text-center">
+              <img class="qr-postion" src="../assets/test.svg" alt="QR">
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+
+    <section class="new-section">
+      <p class="section-title">{{ 'WEBSITE.FEATURES.section_tilte' | translate }}</p>
+      <ion-grid>
+        <ion-row class="ion-text-center">
+          <ion-col class="col-width">
+            <ion-icon class="icon-back-ground-web" color="light" name="globe-outline"></ion-icon>
+            <h3 class="feature-title">
+              {{ 'WEBSITE.FEATURES.web_tilte' | translate }}
+            </h3>
+            <p>
+              {{ 'WEBSITE.FEATURES.web_paragraph' | translate }}
+            </p>
+          </ion-col>
+          <ion-col class="col-width">
+            <ion-icon class="icon-back-ground-edit" color="light" name="pencil-outline"></ion-icon>
+            <h3 class="feature-title">
+              {{ 'WEBSITE.FEATURES.edit_tilte' | translate }}
+            </h3>
+            <p>
+              {{ 'WEBSITE.FEATURES.edit_paragraph' | translate }}
+            </p>
+          </ion-col>
+          <ion-col class="col-width">
+            <ion-icon class="icon-back-ground-touchless" color="light" name="hand-right"></ion-icon>
+            <h3 class="feature-title">
+              {{ 'WEBSITE.FEATURES.touchless_tilte' | translate }}
+            </h3>
+            <p>
+              {{ 'WEBSITE.FEATURES.touchless_paragraph' | translate }}
+            </p>
+          </ion-col>
+          <ion-col class="col-width">
+            <ion-icon class="icon-back-ground-star" color="light" name="star"></ion-icon>
+            <h3 class="feature-title">
+              {{ 'WEBSITE.FEATURES.star_tilte' | translate }}
+            </h3>
+            <p>
+              {{ 'WEBSITE.FEATURES.star_paragraph' | translate }}
+            </p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <!-- <div class="note">
+        {{ 'WEBSITE.FEATURES.note' | translate }}
+      </div> -->
+    </section>
+
+
+    <section class="new-section">
+      <p class="section-title">{{ 'WEBSITE.DISPLAY.section_tilte' | translate }}</p>
+      <p class="ion-text-center section-paragraph">{{ 'WEBSITE.DISPLAY.section_paragraph' | translate }}</p>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-md>
+            <div>
+              <img class="qr-print" src='../assets/img/table.png'>
+              <ion-item lines="none" style="--background: transparent;">
+                <ion-label class="ion-text-center qr-display-text">{{ 'WEBSITE.DISPLAY.Table' | translate }}</ion-label>
+              </ion-item>
+            </div>
+          </ion-col>
+          <ion-col size="12" size-md>
+              <img class="qr-print" src='../assets/img/holder.png'>
+              <ion-item lines="none" style="--background: transparent;">
+                <ion-label class="ion-text-center qr-display-text">{{ 'WEBSITE.DISPLAY.holder' | translate }}</ion-label>
+              </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md>
+            <img class="qr-print" src='../assets/img/card.jpg'>
+            <ion-item lines="none" style="--background: transparent;">
+              <ion-label class="ion-text-center qr-display-text">{{ 'WEBSITE.DISPLAY.card' | translate }}</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col size="12" size-md>
+            <img class="qr-print" src='../assets/img/door.png'>
+            <ion-item lines="none" style="--background: transparent;">
+              <ion-label class="ion-text-center qr-display-text">{{ 'WEBSITE.DISPLAY.door' | translate }}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+
+    <section class="new-section">
+      <p class="section-title">{{ 'WEBSITE.PRICING.section_tilte' | translate }}</p>
+      <ion-grid class="pricing-table">
+        <ion-row>
+
+          <ion-col size="12" size-md>
+            <ion-card style="background-color: #172938; border-radius: 15px;">
+              <ion-card-title class="card-title" style="background-color: #0831392b;">
+                {{ 'WEBSITE.PRICING.basic_tilte' | translate }}
+            </ion-card-title>
+            <ion-card-subtitle class="card-subtitle">
+              <span class="currency">₪</span>
+              <span class="price">30</span>
+              <span class="decimal">.00</span>
+              <span class="period">{{ 'WEBSITE.PRICING.basic_period' | translate }}</span>
+            </ion-card-subtitle>
+            <ion-card-content class="ion-no-padding ion-no-margin">
+              <ion-item lines="full" class="card-item">
+                <ion-label class="ion-text-wrap flex-text">
+                  {{ 'WEBSITE.PRICING.basic_first_feature' | translate }}
+                </ion-label>
+              </ion-item>
+              <ion-item lines="full" class="card-item">
+                <ion-label class="ion-text-wrap flex-text">
+                  {{ 'WEBSITE.PRICING.basic_second_feature' | translate }}
+                </ion-label>
+              </ion-item>
+              <ion-item lines="full" class="card-item">
+                <ion-label class="ion-text-wrap flex-text">
+                  {{ 'WEBSITE.PRICING.basic_third_feature' | translate }}
+                </ion-label>
+              </ion-item>
+              <ion-item lines="full" class="card-item">
+                <ion-label class="ion-text-wrap flex-text">
+                  {{ 'WEBSITE.PRICING.basic_fourth_feature' | translate }} <br>{{ 'WEBSITE.PRICING.basic_fourth_feature_example' | translate }}
+                </ion-label>
+              </ion-item>
+              <ion-item lines="full" class="card-item">
+                <ion-label class="ion-text-wrap flex-text">
+                  {{ 'WEBSITE.PRICING.basic_fifth_feature' | translate }}<br> {{ 'WEBSITE.PRICING.basic_fifth_feature_example' | translate }}
+                </ion-label>
+              </ion-item>
+              <ion-item lines="full" class="card-item">
+                <ion-label class="ion-text-wrap flex-text">
+                  {{ 'WEBSITE.PRICING.basic_seventh_feature' | translate }}
+                </ion-label>
+              </ion-item>
+            </ion-card-content>
+            <div class="ion-text-center vat-text">
+              {{ 'WEBSITE.PRICING.basic_note' | translate }}
+            </div>
+            <ion-card-subtitle class="btn-area">
+              <ion-button fill="solid" shape="round" color="light" class="order-btn" [routerLink]="['/register']">{{ 'WEBSITE.PRICING.trial' | translate }}</ion-button>
+            </ion-card-subtitle>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </section>
+
+
+    <section class="new-section">
+      <ion-card class="ready-card">
+        <h2>{{ 'WEBSITE.DIGITALIZE.title' | translate }}</h2>
+        <p class="digitalize-p">{{ 'WEBSITE.DIGITALIZE.paragraph' | translate }}</p>
+        <ion-button style="margin-top: 10px;" fill="outline" shape="round" class="contact-btn" href="https://api.whatsapp.com/send?phone=970594560918" target="_blank">{{ 'WEBSITE.contact' | translate }}</ion-button>
+      </ion-card>
+      </section>
+    </div>
+
+      <section class="new-section footer">
+        <div class="footer-content container">
+          <div class="footer-content-width">
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <h2>
+                    {{ 'WEBSITE.FOOTER.about' | translate }}
+                  </h2>
+                  <p>
+                    {{ 'WEBSITE.FOOTER.paragraph_first' | translate }}
+                  </p>
+                  <p>
+                    {{ 'WEBSITE.FOOTER.paragraph_second' | translate }}
+                  </p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+          <div class="footer-content-width">
+            <ion-grid>
+              <ion-row class="no-padding-margin">
+                <ion-col>
+                  <ion-grid>
+                    <ion-row>
+                     <ion-col>
+                      <h2>
+                        {{ 'WEBSITE.contact' | translate }}
+                      </h2>
+                     </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col class="ion-no-padding">
+                        <ion-item detail="false" lines="none" class="contact-items ion-no-padding" href="https://api.whatsapp.com/send?phone=970594560918" target="_blank">
+                          <ion-icon name="logo-whatsapp"></ion-icon>
+                          <ion-label>
+                            {{ 'WEBSITE.FOOTER.phone' | translate }}
+                          </ion-label>
+                        </ion-item>
+                        <ion-item detail="false" lines="none" class="contact-items ion-no-padding" href="mailto:info@act.ps" target="_blank">
+                          <ion-icon name="mail-outline"></ion-icon>
+                          <ion-label>
+                            info@act.ps
+                          </ion-label>
+                        </ion-item>
+                        <ion-item detail="false" lines="none" class="contact-items ion-no-padding" href="https://www.google.com/maps/place/%D8%B4%D8%B1%D9%83%D8%A9+%D8%A7%D8%B1%D8%AA%D9%8A%D8%B3%D8%AA%D9%83+%D9%83%D9%88%D8%AF+%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%B2+-+act.ps%E2%80%AD/@31.5432055,35.0991499,20z/data=!4m12!1m6!3m5!1s0x0:0x4ad5c56d140f8018!2z2LTYsdmD2Kkg2KfYsdiq2YrYs9iq2YMg2YPZiNivINiq2YPZhtmI2YTZiNis2YrYsiAtIGFjdC5wcw!8m2!3d31.5432717!4d35.0990298!3m4!1s0x0:0x4ad5c56d140f8018!8m2!3d31.5432717!4d35.0990298" target="_blank">
+                          <ion-icon name="location-outline"></ion-icon>
+                          <ion-label class="ion-text-wrap">
+                            {{ 'WEBSITE.FOOTER.address' | translate }}
+                          </ion-label>
+                        </ion-item>
+                      </ion-col>
+                     </ion-row>
+                     <ion-row class="social-center">
+                      <ion-col style="margin-top: 20px;">
+                        <h2>
+                          {{ 'WEBSITE.FOOTER.social' | translate }}
+                        </h2>
+                        <ion-button fill="clear" class="social-icons" href="https://facebook.com/actpsco" target="_blank"><ion-icon name="logo-facebook"></ion-icon></ion-button>
+                        <ion-button fill="clear" class="social-icons" href="https://twitter.com/actpsCo" target="_blank"><ion-icon name="logo-twitter"></ion-icon></ion-button>
+                        <ion-button fill="clear" class="social-icons" href="https://www.linkedin.com/company/actps" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></ion-button>
+                        <ion-button fill="clear" class="social-icons" href="https://act.ps/" target="_blank"><ion-icon name="globe-outline"></ion-icon></ion-button>
+                      </ion-col>
+                     </ion-row>
+                  </ion-grid>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+        <div class="container end-page">
+          &copy; 2022 Artistic Code Technologies. {{ 'WEBSITE.FOOTER.copy' | translate }}
+        </div>
+      </section>
+
+
+
+
+</ion-content>

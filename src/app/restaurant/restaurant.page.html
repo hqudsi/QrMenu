@@ -1,0 +1,248 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <div class="cover-profile">
+    <ion-skeleton-text *ngIf="!cafeData" animated style="width: 100%;margin: auto;height: 100%;"></ion-skeleton-text>
+    <div class="cover" [ngStyle]="{'background-image': 'url(' + cafeData?.cover_url + ')'}" *ngIf="cafeData?.cover_url"></div>
+    <div class="cover" [ngStyle]="{'background-image': 'url(../assets/img/blank-cover.png)'}" *ngIf="!cafeData?.cover_url"></div>
+    <div class="avatar">
+      <ion-img class="avatar-img" [src]="cafeData?.avatar_url" *ngIf="cafeData?.avatar_url"></ion-img>
+      <ion-img class="avatar-img" src="/assets/img/blank-profile.png" *ngIf="!cafeData?.avatar_url"></ion-img>
+    </div>
+  </div>
+  <ion-card class="card-body">
+    <ion-card-header class="cafe-header">
+      <ion-skeleton-text *ngIf="!cafeData" animated style="width: 60%;margin: auto;height: 30px;"></ion-skeleton-text>
+      <ion-card-title *ngIf="cafeData" class="store-name">{{ cafeData?.name }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="ion-no-padding">
+      <div class="info-grid">
+      <ion-grid>
+        <ion-row style="width: fit-content; margin: auto; max-width: 275px;">
+          <ion-col class="ion-no-padding ion-no-margin">
+            <ion-item lines="none" class="ion-no-padding ion-no-margin">
+              <ion-icon style="color:#989898; padding-inline-end: 5px;" name="location-outline"></ion-icon>
+              <ion-skeleton-text *ngIf="!cafeData" animated style="width: 100px;margin: auto;height: 30px;"></ion-skeleton-text>
+              <ion-label class="store-info ion-text-wrap">{{ cafeData?.address }}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row style="width: fit-content; margin: auto; max-width: 300px;">
+          <ion-col class="ion-no-padding ion-no-margin">
+            <ion-item lines="none" class="ion-no-padding ion-no-margin">
+              <ion-icon style="color:#989898; padding-inline-end: 3px;" name="call-outline"></ion-icon>
+              <ion-skeleton-text *ngIf="!cafeData" animated style="width: 80px;margin: auto;height: 30px;"></ion-skeleton-text>
+              <ion-label class="store-info ion-text-wrap">{{ cafeData?.phone }}</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col class="ion-no-padding ion-no-margin">
+            <ion-item lines="none" class="ion-no-padding ion-no-margin">
+              <ion-icon style="color:#989898; padding-inline-end: 3px;" name="wifi-outline"></ion-icon>
+              <ion-skeleton-text *ngIf="!cafeData" animated style="width: 80px;margin: auto;height: 30px;"></ion-skeleton-text>
+              <ion-label class="store-info ion-text-wrap">{{ cafeData?.wifi }}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        </ion-grid>
+        <ion-grid class="ion-no-padding ion-no-margin">
+        <div class="social-div">
+          <div class="ion-text-center follow-text" *ngIf=" cafeData?.facebook || cafeData?.instagram || cafeData?.whatsapp || cafeData?.snapchat || cafeData?.tiktok || cafeData?.website">{{ 'RESTAURANT.follow_us' | translate }}</div>
+          <ion-row class="social-grid">
+            <ion-col class="ion-text-center padding-bottom-social" *ngIf="cafeData?.facebook">
+              <ion-button style="--color:light;" fill="clear" class="lang_class" href={{cafeData?.facebook}} target="_blank">
+                <ion-icon style="min-height: 36px;" slot="icon-only" style="font-size:40px;color:#3e5b9a;" name="logo-facebook" class="ion-no-margin ion-no-padding"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col  class="ion-text-center padding-bottom-social" *ngIf="cafeData?.instagram">
+              <ion-button style="--color:light;" fill="clear" class="lang_class" href={{cafeData?.instagram}} target="_blank">
+                <ion-icon style="min-height: 36px;" slot="icon-only" style="font-size:30px;color:var(--ion-color-light);" name="logo-instagram" class="ion-no-margin ion-no-padding instagram"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col class="ion-text-center padding-bottom-social" *ngIf="cafeData?.whatsapp">
+              <ion-button style="--color:light;" fill="clear" class="lang_class" href="https://api.whatsapp.com/send?phone={{cafeData?.whatsapp}}" target="_blank">
+                <ion-icon style="min-height: 36px;" slot="icon-only" style="font-size:25px;color:var(--ion-color-light);" name="logo-whatsapp" class="ion-no-margin ion-no-padding whatsapp"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col class="ion-text-center padding-bottom-social" *ngIf="cafeData?.snapchat">
+              <ion-button style="--color:light;" fill="clear" class="lang_class" href="https://www.snapchat.com/add/{{cafeData?.snapchat}}" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="36" height="36" viewBox="0 0 24 24" style=" fill:#000000;"><path fill="#ffeb3b" d="m22 0h-20c-1.105 0-2 .895-2 2v20c0 1.105.895 2 2 2h20c1.105 0 2-.895 2-2v-20c0-1.105-.895-2-2-2zm-3.416 17.764c-.184.356-.066 1.148-.672 1.148h-.02c-.264 0-.741-.151-1.358-.151-.904 0-1.21.196-1.936.707l-.001.001c-.783.551-1.561 1.03-2.615.964-2.066.152-2.547-1.674-4.514-1.674-.568 0-1.11.164-1.358.164-.643 0-.496-.79-.695-1.16-.674-.105-2.103-.355-2.371-.979v-.001c-.13-.301.046-.579.309-.622 1.643-.271 2.936-1.609 3.545-2.985.577-1.171-1.071-.98-1.818-1.657-.612-.558-.066-1.268.664-1.268.382 0 .9.442 1.402.223-.073-1.16-.244-3.029.206-4.033 1.549-3.465 6.073-3.577 8.195-1.576 1.665 1.572 1.452 3.174 1.305 5.608.445.204.943-.234 1.364-.234.442 0 .96.294.97.744.009.46-.507.751-.936.919-.823.318-1.569.419-1.148 1.274.614 1.395 1.933 2.72 3.545 2.986v.001c.213.034.365.223.353.436-.046.763-1.664 1.047-2.416 1.165z"></path><path fill="#263238" d="m11.955 20.933c-.285-.077-1.005.238-2.838-1.055-.716-.505-1.092-.793-2.489-.521-.979.184-1.375-.006-1.604-1.151-.851-.152-2.098-.43-2.439-1.223-.258-.615.112-1.222.689-1.313 1.46-.245 2.634-1.473 3.157-2.673.093-.19.087-.253.087-.254-.187-.243-1.114-.253-1.774-.853-.655-.598-.542-1.478.207-1.919.792-.468 1.365-.054 1.665.023-.079-1.25-.16-2.774.281-3.757 1.697-3.808 6.632-3.967 8.994-1.735 1.664 1.568 1.642 3.165 1.496 5.462.204-.067.73-.396 1.413-.111.889.315 1.192 1.285.528 1.97-.315.322-.763.512-1.191.647-.143.045-.573.182-.658.295.777 1.809 2.066 2.71 3.251 2.905.922.146 1.201 1.455-.172 2.09-.384.178-.902.324-1.579.445-.173.839-.38 1.39-1.595 1.146-1.43-.269-1.823.053-2.486.519-1.911 1.347-2.813 1.029-2.943 1.063zm.053-.998.103.003c1.743 0 2.345-1.397 3.667-1.612 1.074-.18 1.822.087 2.114.087.042-.119.07-.243.097-.369.114-.535.156-.487.267-.733.1-.029 1.815-.228 2.206-.671-2.624-.498-3.762-3.134-3.81-3.247-.188-.38-.221-.727-.094-1.023.365-.855 1.557-.737 2.053-1.244.047-.048.076-.099.075-.133-.001-.058-.086-.148-.246-.206-.402-.16-.589.209-1.317.241-.423-.016-.512-.129-.791-.242.154-2.415.441-4.075-1.128-5.556-1.95-1.838-6.015-1.67-7.395 1.417-.414.923-.22 2.908-.142 4.147-.212.043-.655.525-1.83-.025-.315-.026-.504.117-.522.215-.03.166.461.392.619.454.362.147 1.241.302 1.51.932.399.946-1.406 3.794-3.904 4.269.356.433 2.099.643 2.2.672.103.237.144.149.272.732.028.131.055.256.095.389.086-.006.179-.026.286-.047 1.778-.334 2.397.04 3.301.678.612.432 1.244.877 2.198.877zm8.56-3.277h.002c-.001 0-.002 0-.002 0z"></path></svg>
+              </ion-button>
+            </ion-col>
+            <ion-col class="ion-text-center padding-bottom-social" *ngIf="cafeData?.tiktok">
+              <ion-button style="--color:light;" fill="clear" class="lang_class" href="https://www.tiktok.com/@{{cafeData?.tiktok}}" target="_blank">
+                <ion-icon style="min-height: 36px;" slot="icon-only" style="font-size:25px;color:var(--ion-color-light);" name="logo-tiktok" class="ion-no-margin ion-no-padding tiktok"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col class="ion-text-center padding-bottom-social" *ngIf="cafeData?.website">
+              <ion-button style="--color:light;" fill="clear" class="lang_class" href={{cafeData?.website}} target="_blank">
+                <ion-icon style="min-height: 36px;" slot="icon-only" style="font-size:25px;color:var(--ion-color-light);" name="globe-outline" class="ion-no-margin ion-no-padding globe"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-grid>
+    </div>
+    </ion-card-content>
+
+<ion-card-content class="ion-no-padding">
+      <ion-segment mode="md" [(ngModel)]="segment" swipeGesture="false" (ionChange)="changeSegment(segment)">
+        <ion-segment-button value="meals" style="min-width: 25%;" >
+          <ion-icon style="font-size: 25px;" name="restaurant-outline"></ion-icon>
+          <ion-label style="font-size: 12px;">{{'RESTAURANT.meals' | translate}}</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="drinks" style="min-width: 25%;" >
+          <ion-icon style="font-size: 25px;" name="cafe-outline"></ion-icon>
+          <ion-label style="font-size: 12px;">{{'RESTAURANT.drinks' | translate}}</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="desserts" style="min-width: 25%;" >
+          <ion-icon style="font-size: 25px;" name="ice-cream-outline"></ion-icon>
+          <ion-label style="font-size: 12px;">{{'RESTAURANT.desserts' | translate}}</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="hookahs" style="min-width: 25%;" >
+          <svg [style.fill]="segment=='hookahs'? '#3880ff':'#000000b3'" xmlns="http://www.w3.org/2000/svg" version="1.0" width="24.000000pt" height="24.000000pt" viewBox="0 0 24.000000 24.000000" preserveAspectRatio="xMidYMid meet"><g transform="translate(0.000000,24.000000) scale(0.004687,-0.004687)" stroke="none"><path d="M1906 4744 c-19 -18 -19 -28 -6 -114 12 -70 62 -188 106 -245 l26 -35 -180 0 c-215 0 -218 -1 -209 -87 12 -111 83 -215 183 -264 46 -23 60 -24 262 -27 l212 -3 0 -143 0 -143 -112 -7 c-190 -11 -377 -61 -548 -146 -321 -161 -539 -425 -627 -758 -34 -131 -43 -381 -19 -522 30 -170 104 -355 199 -495 59 -86 193 -222 285 -288 100 -72 239 -145 367 -192 55 -20 102 -38 103 -40 2 -2 -10 -24 -28 -50 -77 -112 -163 -325 -176 -438 l-7 -57 -93 0 c-123 0 -124 -2 -124 -165 0 -93 4 -126 16 -143 l15 -22 915 0 c612 0 922 3 935 10 17 10 19 23 19 153 0 98 -4 147 -12 155 -8 8 -47 12 -108 12 l-97 0 -12 67 c-17 93 -65 235 -107 312 -19 36 -30 68 -24 71 8 5 210 27 298 33 20 2 31 -11 67 -73 37 -66 46 -75 74 -78 44 -5 63 14 59 56 l-3 35 250 164 c359 236 335 217 334 255 -1 48 -67 152 -99 156 -15 1 -147 -54 -335 -142 l-310 -143 -24 18 c-67 53 -119 -20 -71 -99 24 -39 29 -37 -115 -52 -60 -6 -132 -13 -160 -16 l-50 -5 -65 77 c-36 42 -82 91 -104 110 l-38 33 26 108 c14 59 28 134 32 165 l7 58 261 166 c143 92 276 178 294 191 45 34 42 65 -11 132 l-44 54 34 56 c53 88 75 170 80 301 10 235 -64 428 -232 609 -121 130 -314 248 -494 302 l-81 24 0 167 0 167 203 3 c196 3 203 4 252 30 59 30 130 104 151 154 8 20 20 60 25 91 9 45 8 59 -5 79 -16 23 -19 24 -196 26 l-180 3 34 48 c47 66 76 138 92 227 10 59 10 80 1 100 l-12 25 -542 3 c-482 2 -543 0 -557 -14z m990 -126 c-12 -62 -56 -140 -112 -198 l-57 -60 -269 0 -270 0 -52 54 c-52 55 -95 129 -114 199 l-10 37 445 0 446 0 -7 -32z m254 -392 c0 -30 -69 -103 -119 -124 -49 -22 -59 -22 -568 -22 -305 0 -532 4 -553 10 -47 13 -106 63 -130 111 l-20 39 695 0 c578 0 695 -2 695 -14z m-630 -410 l0 -154 -42 5 c-24 2 -49 6 -55 9 -10 2 -13 41 -13 149 l0 145 55 0 55 0 0 -154z m-222 -317 l-3 -71 -35 -12 c-20 -6 -44 -25 -57 -45 l-24 -35 3 -387 3 -387 24 -26 c13 -14 39 -29 58 -32 l33 -6 0 -202 0 -201 -45 -24 c-40 -21 -48 -22 -59 -10 -8 8 -102 111 -211 229 -108 118 -207 219 -220 224 -12 5 -30 6 -39 3 -8 -3 -65 -68 -125 -144 -78 -97 -110 -146 -111 -165 0 -24 30 -47 308 -235 l308 -207 18 -101 c10 -55 25 -120 32 -145 l14 -45 -68 -68 c-78 -79 -74 -79 -221 -22 -237 90 -413 212 -546 378 -295 368 -326 904 -74 1286 204 310 581 506 997 520 l43 1 -3 -71z m458 -23 c116 -47 200 -96 289 -167 259 -209 362 -547 245 -806 l-30 -65 -27 34 c-65 79 -61 81 -304 -182 -116 -127 -216 -230 -221 -230 -5 0 -22 7 -38 15 l-30 16 0 203 0 204 34 12 c18 6 44 22 57 36 l24 26 3 341 c2 188 0 366 -3 396 -8 63 -46 111 -89 111 -24 0 -26 3 -26 45 0 56 3 56 116 11z m-116 -511 l0 -345 -170 0 -170 0 0 345 0 345 170 0 170 0 0 -345z m-120 -654 l0 -188 -55 0 -55 0 0 188 0 189 55 0 55 0 0 -189z m-738 30 c13 -16 96 -108 186 -204 158 -171 163 -177 150 -201 l-13 -26 -237 158 -236 157 57 72 c31 40 59 72 63 73 4 0 17 -13 30 -29z m1438 -41 c30 -39 53 -74 51 -78 -3 -4 -104 -71 -225 -148 -194 -125 -223 -140 -233 -126 -7 9 -13 19 -13 23 0 5 358 399 363 399 2 0 27 -32 57 -70z m-656 -304 c62 -19 115 -60 133 -105 22 -51 12 -190 -22 -316 -15 -55 -29 -110 -32 -122 -4 -17 15 -40 89 -113 l93 -91 -200 5 c-172 4 -316 18 -429 42 l-28 6 62 63 c72 72 71 63 25 230 -19 71 -28 126 -29 190 -1 109 14 144 77 177 95 49 177 59 261 34z m1442 -443 c-4 -5 -121 -83 -259 -174 l-252 -166 -23 40 c-12 22 -20 43 -17 46 6 5 544 259 554 260 2 1 1 -2 -3 -6z m-1820 -368 c151 -28 340 -46 534 -51 l195 -4 42 -72 c47 -80 98 -211 117 -305 l14 -63 -620 0 -619 0 7 38 c12 68 56 196 91 267 54 107 122 205 143 205 10 0 53 -7 96 -15z m1124 -660 l0 -55 -835 0 -835 0 0 55 0 55 835 0 835 0 0 -55z"/></g></svg>
+          <ion-label style="font-size: 12px; margin:2px 0px 10px 0px;">{{'RESTAURANT.hookahs' | translate}}</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+
+
+
+      <ion-grid style="margin: 10px auto 20px auto;">
+        <ion-row>
+          <ion-col class="ion-no-padding ion-no-margin">
+            <ion-searchbar placeholder="{{ 'MY_ITEMS.search' | translate }}" inputmode="search" mode="md" class="searchbar" (search)="search($event)" (ionInput)="inputSearh($event)"></ion-searchbar>
+          </ion-col>
+          <!-- <ion-col size="2" class="ion-no-padding ion-no-margin ion-align-self-center ion-text-center">
+            <ion-button fill="clear" color="dark" class="ion-no-padding ion-no-margin">
+              <ion-icon class="filter-btn" size="large" name="options-outline"></ion-icon>
+            </ion-button>
+          </ion-col> -->
+        </ion-row>
+      </ion-grid>
+
+      <div class="ion-text-center ion-padding" *ngIf="startSearch && fitchingData">
+        <ion-spinner color="primary"></ion-spinner>
+      </div>
+
+      <!-- Start Items Search -->
+      <ion-card-content class="container ion-no-padding ion-no-margin" *ngIf="startSearch && !fitchingData">
+        <ion-card class="item-card" *ngFor="let item of items">
+          <ion-img class="item-img" src="/assets/img/no_img.png"  *ngIf="!item.image_url"></ion-img>
+          <ion-img class="item-img" [src]="item.image_url" *ngIf="item.active === true && item.image_url"></ion-img>
+          <ion-img class="item-img-disable" [src]="item.image_url" *ngIf="item.active === false && item.image_url"></ion-img>
+          <ion-card-content class="no-top-padding">
+            <ion-grid>
+              <ion-row>
+                <ion-col class="ion-text-start ion-text-capitalize">
+                  <ion-label *ngIf="item.active === true" class="item-name">{{ item.name }}</ion-label>
+                  <ion-label *ngIf="item.active === false" class="item-name">{{ item.name }} ({{'ITEM_DETAIL.unavailable' | translate}})</ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="ion-text-start">
+                  <p>{{ item.description }}</p>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <ion-grid>
+              <ion-row>
+                <ion-col *ngIf="item.size" class="ion-text-center">
+                  <div title="{{ 'ADDITEM.size' | translate }}">
+                    <ion-icon style="font-size: 20px; pointer-events:none; vertical-align: text-bottom;" name="cube-outline"></ion-icon>
+                    {{ item.size }}
+                  </div>
+                </ion-col>
+                <ion-col *ngIf="item.preparing_time" class="ion-text-center">
+                  <div title="{{ 'ADDITEM.preparing_time' | translate }}">
+                    <ion-icon style="font-size: 20px; pointer-events:none; vertical-align: text-bottom;" name="time-outline"></ion-icon>
+                    {{ item.preparing_time }} {{ 'ADDITEM.min' | translate }}
+                  </div>
+                </ion-col>
+                <ion-col *ngIf="item.person_number" class="ion-text-center">
+                  <div title="{{ 'ADDITEM.person_number' | translate }}">
+                    <ion-icon style="font-size: 20px; pointer-events:none; vertical-align: text-bottom;" name="person-outline"></ion-icon>
+                    {{ item.person_number }}
+                  </div>
+                </ion-col>
+                <ion-col *ngIf="item.calories" class="ion-text-center">
+                  <div title="{{ 'ADDITEM.calories' | translate }}">
+                    <ion-icon style="font-size: 20px;pointer-events:none; vertical-align: text-bottom;" name="flash-outline"></ion-icon>
+                    {{ item.calories }} {{ 'ADDITEM.kcal' | translate }}
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+          <ion-card-content class="ion-no-padding ion-no-margin" style="min-height: 70px;">
+            <ion-row class="ion-text-center border-top ion-align-items-center" style="min-height: 70px !important;">
+              <!-- price after disocunt-->
+              <ion-col *ngIf="item.discount_price > 0">
+                <p class="Sale-price">{{ item.discount_price | number : '1.2-2'}}
+                  <span class="currency-symbol">{{ item.currency }}</span>
+                </p>
+              </ion-col>
+              <ion-col>
+                <!-- price without discount-->
+                <div *ngIf="!item.discount_price">
+                  <p class="Sale-price">{{ item.price | number : '1.2-2'}}
+                    <span class="currency-symbol">{{ item.currency }}</span>
+                  </p>
+                </div>
+                <!-- price before disocunt-->
+                <div *ngIf="item.discount_price > 0">
+                  <p class="price_original"> {{ item.price | number : '1.2-2'}}
+                    <span class="currency-symbol">{{ item.currency }}</span>
+                  </p>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-card-content>
+      <!-- End Items Search -->
+
+      <!-- Start Category -->
+      <ion-card-content class="container ion-no-padding ion-no-margin" *ngIf="!startSearch">
+        <div class="category-card" *ngIf="!categories">
+          <ion-skeleton-text  animated style="width: 100%;margin: auto;height: 125px;"></ion-skeleton-text>
+        </div>
+        <div class="category-card" *ngIf="!categories">
+          <ion-skeleton-text  animated style="width: 100%;margin: auto;height: 125px;"></ion-skeleton-text>
+        </div>
+        <div class="category-card" *ngIf="categories?.length == 0">
+          <p class="no-sub-category">
+            <span class="oops">{{'RESTAURANT.oops' | translate}}</span>
+            {{'RESTAURANT.oops_desc' | translate}}
+          </p>
+        </div>
+        <div class="category-card" *ngFor="let category of categories" (click)="openItems(category)">
+            <ion-img class="category-img" *ngIf="category?.image_url" [src]="category?.image_url"></ion-img>
+            <ion-img class="category-img" *ngIf="!category.image_url" src="/assets/img/blank-category.png"  ></ion-img>
+            <ion-label class="category-name">
+              {{ category.name }}
+            </ion-label>
+        </div>
+      </ion-card-content>
+
+    </ion-card-content>
+      <ion-card-content class="lang ion-no-margin ion-no-padding" style="height: fit-content;">
+        <ion-list class="ion-no-margin ion-no-padding" style="height: fit-content;">
+          <ion-item lines="none" class="ion-no-margin" style="height: fit-content;">
+              <ion-icon  style="color:#505050" size="large" name="earth" slot="start" class="lang-icon" style="height: 50px;"></ion-icon>
+              <ion-label>{{ 'language' | translate }}</ion-label>
+              <ion-select [value]="currenctLanguage" (ionChange)="languageChange($event)" mode="ios" interface="action-sheet">
+                <ion-select-option style="color:#000" value="en">{{ 'english' | translate }}</ion-select-option>
+                <ion-select-option value="ar">{{ 'arabic' | translate }}</ion-select-option>
+              </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+  </ion-card>
+
+  <div class="logo">
+    <ion-button class="logo-btn" fill="clear" [routerLink]="['/about']">
+      <ion-img src="../assets/applogo.png"></ion-img>
+    </ion-button>
+  </div>
+</ion-content>

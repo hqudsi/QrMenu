@@ -1,0 +1,51 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+  <div class="background-cafe-img"></div>
+
+
+
+  <div class="flex-card ion-no-margin ion-no-padding">
+    <ion-card class="card-body ion-no-margin ion-no-padding">
+
+      <ion-toolbar color="light">
+        <ion-buttons slot="start" class="back-margin">
+          <ion-back-button text= '{{ "back" | translate }}' mode="ios"  class="header-back-button"  defaultHref="/"></ion-back-button>
+        </ion-buttons>
+      </ion-toolbar>
+
+
+          <form [formGroup]="credentials" class="input-form">
+            <div class="input-user">
+              <ion-item color="light" lines="none">
+                <ion-icon style="color:#a5a5a8" class="ion-padding-end" name="person-outline"></ion-icon>
+                <ion-input formControlName="email" type="text" name="email" placeholder="{{ 'LOGIN.email' | translate }}" required></ion-input>
+              </ion-item>
+              <div *ngIf="(credentials.get('email').dirty || credentials.get('email').touched)
+                        && !credentials.get('email').valid" class="errors">
+              </div>
+            </div>
+            <div class="input-password">
+              <ion-item color="light" lines="none">
+                <ion-icon style="color:#a5a5a8" class="ion-padding-end" name="lock-closed-outline"></ion-icon>
+                <ion-input (keyup.enter)="login()" formControlName="password" type="password" name="password" placeholder="{{ 'LOGIN.password' | translate }}" required></ion-input>
+              </ion-item>
+              <div *ngIf="(credentials.get('password').dirty || credentials.get('password').touched)
+                        && !credentials.get('password').valid" class="errors">
+              </div>
+            </div>
+          </form>
+
+        <div class="ion-no-margin ion-no-padding">
+          <ion-button (click)="login()" style="height: 60px;" class="ion-no-margin ion-no-padding" type="submit" size="large" expand="full" fill="solid" color="primary">{{ 'HOME.login' | translate }}</ion-button>
+        </div>
+    </ion-card>
+  <ion-card>
+
+  </ion-card>
+  </div>
+
+
+</ion-content>

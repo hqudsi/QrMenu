@@ -1,0 +1,46 @@
+<ion-header mode="ios">
+  <ion-toolbar style="--background:#fff;">
+    <div class="back-btn-area">
+      <ion-buttons slot="start">
+        <ion-back-button text= '{{ "back" | translate }}' mode="ios"  class="header-back-button"  defaultHref="/"></ion-back-button>
+        <ion-title mode="ios">{{ 'REORDER.select_category' | translate }}</ion-title>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="card-body" *ngIf="!myCategories">
+    <ion-list>
+      <ion-item detail *ngFor="let i of [].constructor(5)">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated style="width: 55px;margin: auto;height: 55px;"></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h2><ion-skeleton-text animated style="width: 90%;height: 20px;"></ion-skeleton-text></h2>
+          <p><ion-skeleton-text animated style="width: 50%;height: 20px;"></ion-skeleton-text></p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <!--before load-->
+
+  <!--after load-->
+  <ion-card class="card-body">
+    <ion-list class="ion-no-margin ion-no-padding"  *ngFor="let entry of myCategoriesKyes">
+      <ion-list-header>
+          <ion-label>{{ 'RESTAURANT.' + entry | translate }}</ion-label>
+      </ion-list-header>
+      <ion-item lines="full" *ngFor="let category of myCategoriesGrouped[entry]" button detail (click)="showCategory(category)">
+        <ion-thumbnail slot="start">
+          <ion-img src="/assets/img/blank-category.png"  *ngIf="!category.image_url"></ion-img>
+          <img [src]="category.image_url" *ngIf="category.image_url">
+        </ion-thumbnail>
+        <ion-label>
+          <h2 style="font-size: 18px; font-weight: 900;">{{category.name}}</h2>
+          <p style="font-size: 14px; font-weight: normal;">{{ "RESTAURANT." + category?.type_id | translate }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

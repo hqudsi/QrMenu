@@ -1,0 +1,172 @@
+<ion-header mode="ios">
+  <ion-toolbar class="top-toolbar">
+    <div class="back-btn-area">
+      <ion-buttons slot="start">
+        <ion-back-button text='{{ "back" | translate }}' mode="ios" class="header-back-button" defaultHref="/">
+        </ion-back-button>
+        <ion-title mode="ios">{{ 'ADDITEM.page_title' | translate }}</ion-title>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="card-body ion-no-margin ion-no-padding">
+    <ion-card-content class="ion-no-margin ion-no-padding">
+      <ion-grid class="ion-no-margin ion-no-padding">
+        <ion-row class="mobile-media">
+          <ion-col size="8">
+            <form [formGroup]="credentials">
+              <div class="input-group">
+                <ion-item lines="none" mode="md">
+                  <ion-label position="floating">{{ 'ADDITEM.item_name' | translate }}</ion-label>
+                  <ion-input formControlName="name" type="text" name="name" placeholder="{{ 'ADDITEM.item_name_desc' | translate }}" required></ion-input>
+                </ion-item>
+                <div *ngIf="(credentials.get('name').dirty || credentials.get('name').touched)
+                        && credentials.get('name').errors" class="errors">
+                </div>
+              </div>
+
+              <div class="input-group">
+                <ion-item lines="none" mode="md">
+                  <ion-label>{{ 'ADDITEM.category' | translate }}</ion-label>
+                  <ion-select (ionChange)="changeCategoies()" multiple="true" style="min-height: 64px;" cancelText="{{ 'CANCEL' | translate }}" okText="{{ 'select' | translate }}" [disabled]="!categories" formControlName="categories" interface="action-sheet" mode="ios">
+                    <ion-select-option *ngFor="let category of categories" [value]="category.id">{{category.name}}
+                    </ion-select-option>
+                  </ion-select>
+                </ion-item>
+                <div *ngIf="(credentials.get('categories').dirty || credentials.get('categories').touched)
+                        && credentials.get('categories').errors" class="errors">
+                </div>
+                <div class="note"> {{ 'REORDER.multi_cat_item' | translate }} </div>
+              </div>
+
+              <div class="input-group">
+                <ion-item lines="none" mode="md">
+                  <ion-label position="floating">{{ 'ADDITEM.price' | translate }}</ion-label>
+                  <ion-input formControlName="price" inputmode="tel" type="number" name="price" placeholder="{{ 'ADDITEM.price_desc' | translate }}" required></ion-input>
+                </ion-item>
+                <div *ngIf="(credentials.get('price').dirty || credentials.get('price').touched)
+                        && credentials.get('price').errors" class="errors">
+                </div>
+              </div>
+
+
+              <div class="input-group">
+                <ion-item lines="none" mode="md">
+                  <ion-label>{{ 'ADDITEM.currency' | translate }}</ion-label>
+                  <ion-select style="min-height: 64px;" cancelText="{{ 'CANCEL' | translate }}"  [disabled]="!currencies" formControlName="currency" interface="action-sheet" mode="ios">
+                    <ion-select-option *ngFor="let currency of currencies" [value]="currency.symbol">{{ currency.name }}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+                <div *ngIf="(credentials.get('currency').dirty || credentials.get('currency').touched)
+                        && credentials.get('currency').errors" class="errors">
+                </div>
+              </div>
+
+
+
+              <!-- <div class="input-group">
+              <ion-item lines="none" mode="md">
+                <ion-label position="floating">{{ 'ADDITEM.discount_price' | translate }}</ion-label>
+                <ion-input formControlName="discount_price" type="number" name="discount_price" placeholder="{{ 'ADDITEM.discount_price_desc' | translate }}"></ion-input>
+              </ion-item>
+              <div *ngIf="(credentials.get('discount_price').dirty || credentials.get('discount_price').touched)
+                        && credentials.get('discount_price').errors" class="errors">
+              </div>
+            </div> -->
+
+
+              <div class="input-group">
+                <ion-item lines="none" mode="md">
+                  <ion-label position="floating">{{ 'ADDITEM.description' | translate }}</ion-label>
+                  <ion-textarea formControlName="description" type="text" name="description" placeholder="{{ 'ADDITEM.description_desc' | translate }}"></ion-textarea>
+                </ion-item>
+                <div *ngIf="(credentials.get('description').dirty || credentials.get('description').touched)
+                        && credentials.get('description').errors" class="errors">
+                </div>
+              </div>
+
+
+
+
+              <div class="input-group">
+                <ion-item lines="none" mode="md">
+                  <ion-label position="floating">{{ 'ADDITEM.size' | translate }}</ion-label>
+                  <ion-input formControlName="size" type="text" name="size" placeholder="{{ 'ADDITEM.size_desc' | translate }}"></ion-input>
+                </ion-item>
+                <div *ngIf="(credentials.get('size').dirty || credentials.get('size').touched)
+                        && credentials.get('size').errors" class="errors">
+                </div>
+              </div>
+
+              <div class="input-group">
+                <ion-item lines="none" mode="md">
+                  <ion-label position="floating">{{ 'ADDITEM.person_number' | translate }}</ion-label>
+                  <ion-input formControlName="person_number" type="number" name="person_number" placeholder="{{ 'ADDITEM.person_number_desc' | translate }}"></ion-input>
+                </ion-item>
+                <div *ngIf="(credentials.get('person_number').dirty || credentials.get('person_number').touched)
+                        && credentials.get('person_number').errors" class="errors">
+                </div>
+              </div>
+
+              <div class="input-group">
+                <ion-item lines="none" mode="md">
+                  <ion-label position="floating">{{ 'ADDITEM.preparing_time' | translate }}</ion-label>
+                  <ion-input formControlName="preparing_time" type="number" name="preparing_time" placeholder="{{ 'ADDITEM.preparing_time_desc' | translate }}"></ion-input>
+                </ion-item>
+                <div *ngIf="(credentials.get('preparing_time').dirty || credentials.get('preparing_time').touched)
+                        && credentials.get('preparing_time').errors" class="errors">
+                </div>
+              </div>
+
+              <div class="input-group">
+                <ion-item lines="none" mode="md">
+                  <ion-label position="floating">{{ 'ADDITEM.calories' | translate }}</ion-label>
+                  <ion-input formControlName="calories" type="number" name="calories" placeholder="{{ 'ADDITEM.calories_desc' | translate }}"></ion-input>
+                </ion-item>
+                <div *ngIf="(credentials.get('calories').dirty || credentials.get('calories').touched)
+                        && credentials.get('calories').errors" class="errors">
+                </div>
+              </div>
+
+              <div class="input-group" *ngIf="userType === 4">
+                <ion-item lines="none">
+                  <ion-label>{{ 'DEFUALT.defualt_item' | translate }}</ion-label>
+                  <ion-checkbox mode="md" slot="start" formControlName="defualt_item"></ion-checkbox>
+                </ion-item>
+              </div>
+
+              <div class="input-group" *ngIf="userType === 4">
+                <ion-item lines="none">
+                  <ion-label>{{ 'DEFUALT.selected_item' | translate }}</ion-label>
+                  <ion-checkbox mode="md" slot="start" formControlName="selected_item"></ion-checkbox>
+                </ion-item>
+              </div>
+
+            </form>
+          </ion-col>
+
+          <ion-col style="align-self: center;" size="2">
+          </ion-col>
+          <ion-col style="align-self: center;" size="2">
+            <div class="profilepic-border ion-padding-top ion-padding-bottom" style="text-align: -webkit-center !important;">
+              <div class="insidepic">
+                <ion-img *ngIf="imageDataSource" (click)="selectImageSource()" [src]="imageDataSource"></ion-img>
+              </div>
+              <ion-button fill="solid" class="profilebutton" (click)="selectImageSource()">
+                <ion-icon color="primary" name="camera"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </div>
+</ion-content>
+
+
+<ion-footer class="btn-footer ion-no-border">
+  <ion-button type="submit" style="height: 50px;" size="large" expand="full" fill="solid" (click)="addItem()" shape="round" color="primary">{{ 'save' | translate }}</ion-button>
+</ion-footer>

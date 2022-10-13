@@ -1,0 +1,74 @@
+<ion-header mode="ios">
+  <ion-toolbar class="top-toolbar">
+    <ion-title>{{'IMPORT_CATEGORY.page_title' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card class="card-body" *ngIf="!categories">
+    <ion-list>
+      <ion-item detail *ngFor="let i of [].constructor(5)">
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated style="width: 55px;margin: auto;height: 55px;"></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h2><ion-skeleton-text animated style="width: 90%;height: 20px;"></ion-skeleton-text></h2>
+          <p><ion-skeleton-text animated style="width: 50%;height: 20px;"></ion-skeleton-text></p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+  <!--before load-->
+
+  <!--after load-->
+  <div class="note">{{ 'IMPORT_CATEGORY.empty_category_import' | translate }}</div>
+  <ion-card class="card-body">
+    <ion-list class="ion-no-margin ion-no-padding"  *ngFor="let entry of categoriesKeys">
+      <ion-list-header>
+        <ion-item mode="ios" lines="none" class="ion-no-padding">
+          <ion-label>{{ 'RESTAURANT.' + entry.name | translate }}</ion-label>
+          <ion-button class="check-group-button" (click)="checkGroup(entry)">
+            <ion-icon class="check-group-icon" name="ellipse-outline" size="large" slot="icon-only" *ngIf="!entry.isChecked && !entry.someChecked"></ion-icon>
+            <ion-icon color="primary" name="checkmark-circle" size="large" slot="icon-only" *ngIf="entry.isChecked"></ion-icon>
+            <ion-icon color="primary" name="remove-circle" size="large" slot="icon-only" *ngIf="entry.someChecked && !entry.isChecked"></ion-icon>
+          </ion-button>
+        </ion-item>
+      </ion-list-header>
+      <ion-item lines="full" *ngFor="let category of categoriesGrouped[entry.name]">
+        <ion-thumbnail slot="start">
+          <ion-img src="/assets/img/blank-category.png"  *ngIf="!category.image_url"></ion-img>
+          <img [src]="category.image_url" *ngIf="category.image_url">
+        </ion-thumbnail>
+        <ion-label>
+          <h2 style="font-size: 18px; font-weight: 900;">{{category.name}}</h2>
+          <p style="font-size: 14px; font-weight: normal;">{{ "RESTAURANT." + category?.type_id | translate }}</p>
+        </ion-label>
+        <ion-checkbox mode="ios" (ionChange)="checkedCategory(entry)" [(ngModel)]="category.isChecked"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+</ion-content>
+
+<!-- <ion-footer class="ion-no-margin ion-no-padding">
+  <div class="ion-no-margin ion-no-padding">
+    <ion-button (click)="save()" style="height: 60px;" class="ion-no-margin ion-no-padding" type="submit" size="large" expand="full" fill="solid" color="primary">{{ 'save' | translate }}</ion-button>
+  </div>
+</ion-footer> -->
+
+<ion-footer mode="md">
+  <ion-toolbar>
+    <ion-buttons slot="end" class="footer-buttons">
+      <ion-button [disabled]="!anyCheck" shape="round" fill="solid" color="success" (click)="save()">
+        <ion-icon name="checkmark-done-outline"></ion-icon>
+        &nbsp; {{ 'save' | translate }}
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

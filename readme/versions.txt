@@ -1,0 +1,106 @@
+==============================================================================================================================================
+************************************************************* versionName 0.0.09 *************************************************************
+Android version : No app yet
+Ios version : No app yet
+
+- git number : * {
+ 1. Re-order items (new page)
+ 2. Re-order category (new page)
+ 3. Show defult or selected checked in edit item and category
+}
+
+- get number : * {
+  1- Order items and categories for clients depend on order field and create_at
+}
+
+==============================================================================================================================================
+************************************************************* versionName 0.0.10 *************************************************************
+Android version : No app yet
+Ios version : No app yet
+
+- git number : 847f867 {
+  1. multi-category for item. (by admin)
+}
+
+
+- git number : 88d5485 {
+  1. translate multi-category btn.
+  2. Add multi-category note in new item page.
+  3. Add multi-category note in edit item page.
+  4. Add multi-category notes in items orders screen
+}
+
+- git number : 9916492 {
+  1. Change add btn in items and categories.
+}
+
+==============================================================================================================================================
+************************************************************* versionName 0.0.11 *************************************************************
+Android version : No app yet
+Ios version : No app yet
+
+- git number : 890728f, 1bc17d4 {
+  1. Add selected item screen. (by admin)
+  2. Add import categories.
+  3. Add import items.
+}
+
+- git number : 677967e {
+  1. translate import pages.
+  2. Redesign import items page.
+  3. Add notes for import item screen.
+}
+
+- git number : 2ee8a40, ccaab6d {
+  1. add select all in import pages (categories, items)
+  2. change import categories btns
+}
+
+
+==============================================================================================================================================
+************************************************************* versionName 0.0.12 *************************************************************
+Android version : No app yet
+Ios version : No app yet
+
+- git number : 8e19d83 {
+  1. Add item reference to item details
+  2. Add item Create date to item details
+  3. Add item Category to item details
+}
+
+- git number : 59ca527, 30b699c {
+  1. Add reference item modal
+  2. get reference item data
+  3. Fix fix datetime pipe
+}
+
+- git number : ec24dd7 {
+  1. design reference item page
+  2. Add category reference to categories details
+}
+
+- git number : 5d4eb60 {
+  1. Add category reference modal
+}
+
+- git number : 91f9753 {
+  1. Redesign reference category page
+  2. Redesign reference item page
+}
+
+- git number : 8204666 {
+  1. update (hani?)
+}
+
+- git number : * {
+  1. Add type to reference category page
+  2. Re-translate profile description
+}
+
+- git number : * {
+  1. Fix translate profile and cover upload msg
+  2. Fix translate empty username and password
+  3. Fix translate invaild login msg
+  4. Fix other translate error or unclear msg
+}
+

@@ -1,0 +1,115 @@
+.logo-card {
+    width: 200px;
+    margin: 30px auto;
+    --ion-background-color: transparent;
+    box-shadow: none;
+  }
+
+  ion-card-content{
+    padding: 0px 0px 0px 0px;
+    padding-top: 0px;
+    ion-label{
+      color: rgb(20, 20, 20);
+      font-size: 15px !important;
+    }
+  }
+
+  .white-card{
+    max-width: 680px;
+      width: 90%;
+      margin: 0px auto;
+      border-radius: 20px;
+      z-index: 100;
+    }
+
+  .review-item {
+    --padding-start: 16px;
+    --min-height: 35px !important;
+    display: contents;
+    ion-label {
+      margin: 0px 0px 0px !important;
+    }
+  }
+
+  ion-list{
+    padding: 0px;
+    background-color: transparent;
+  }
+
+  ion-card{
+    // width: 90%;
+    margin: 10px auto;
+  }
+
+  .logout {
+    margin: 30px 30px 20px 30px;
+    --border-radius: 20px;
+    height: 45px;
+  }
+
+
+
+  .account-details-header {
+    padding: 0px 0px 0px 0px;
+    h3{
+      font-size: 16px !important;
+      font-weight: bold;
+    }
+  }
+
+  .lang-text{
+    color: var(--ion-color-olive);
+    font-weight: bold;
+  }
+
+  .buttons-grid {
+    padding: 0px;
+  }
+
+  .button-col {
+    padding: 0px;
+    ion-button {
+      height: 50px !important;
+      margin: 0px;
+    }
+  }
+  .button-col-start {
+    border-right: 1px solid #dfdfdf;
+  }
+  .button-col-end {
+    border-left: 0px solid #dfdfdf;
+  }
+
+  .gray_text{
+    color: #448E6E !important;
+  }
+
+  .version{
+    max-width: 680px;
+    text-align:center;
+    margin: 20px auto 0px auto;
+    padding: 0px;
+  }
+
+  .disabled{
+    color: #448E6E !important;
+    opacity: 0.2;
+  }
+
+
+.text-color-danger{
+  color: var(--ion-color-danger);
+  font-weight: 600;
+}
+
+.text-color{
+  font-weight: 600;
+}
+
+
+.panel-bg {
+  background-image: url(/assets/img/backg.png) !important;
+  --background: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}

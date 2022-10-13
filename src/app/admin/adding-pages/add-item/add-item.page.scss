@@ -1,0 +1,257 @@
+
+
+.sign_btn_wrap {
+  text-align: center;
+  padding-top: 15px;
+}
+
+ion-img {
+  height: 250px;
+  max-width: 250px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.profilebutton{
+  z-index: +2;
+  margin: 0px;
+  width: 250px;
+  --border-radius: 0px;
+  border-width: 0.55px;
+  border-style: solid;
+  border-color: var(--ion-color-step-150, rgba(0, 0, 0, 0.2));
+  --background: #fff;
+  --box-shadow: none;
+  --background-hover: var(--ion-color-primary);
+  --background-focused:var(--ion-color-primary);
+  --background-activated:var(--ion-color-primary);
+}
+
+.insidepic {
+  height: 250px;
+  width: 250px;
+  --border-radius: 0px;
+  border-width: 0.55px 0.55px 0 0.55px;
+  border-style: solid;
+  border-color: var(--ion-color-step-150, rgba(0, 0, 0, 0.2));
+  background-color: #fff;
+  --box-shadow: none;
+}
+
+.profilepic{
+  width: 100%;
+  height: 100%;
+  border-color: transparent;
+  --box-shadow: none;
+}
+
+.profilepic-border{
+  margin-top: 15px;
+  // background:  #dddddd ;
+}
+
+
+.chip-input {
+  padding: 0px 6px;
+  border: none;
+  background-color: transparent;
+}
+.chip-input::placeholder {
+  color: gray;
+  opacity: 1;
+}
+.chip-input:focus {
+  outline: 0;
+}
+
+mat-chip-list {
+  width: 75%;
+  padding: 5px
+}
+
+.div-empty-elements {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.button-group {
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+// .input-top-group {
+//   border-radius: 10px;
+//   overflow: hidden;
+//   margin-top: 10px;
+//   margin-left: 10px;
+//   margin-right: 10px;
+//   border: 1px solid var(--ion-color-dark);
+//   background-color: var(--ion-color-backg);
+//   .input-child-group {
+//     border-radius: 10px;
+//     overflow: hidden;
+//     margin-top: 5px;
+//     margin-left: 5px;
+//     margin-right: 5px;
+//     padding-top: 10px;
+//     padding-bottom: 10px;
+//     border: 0.5px solid var(--ion-color-dark);
+//     background-color: var(--ion-color-backg);
+//     --background: var(--ion-color-backg);
+//   }
+// }
+
+
+// .inner-input-group {
+//   border-radius: 50px;
+//   overflow: hidden;
+//   margin-top: 5px;
+//   margin-left: 5px;
+//   margin-right: 5px;
+//   border: 0.5px solid var(--ion-color-dark);
+// }
+
+.multi-select {
+  --border-color: black;
+  --background: white;
+}
+
+
+.elementNote{
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.close-icon {
+  background-color: #ffffff;
+  padding-right: 0px !important;
+  border-radius: 50%;
+}
+
+
+
+.back-btn-area{
+  max-width: 680px;
+  margin: auto;
+}
+
+
+
+.card-body{
+  width: 95%;
+  max-width: 680px;
+  margin: 20px auto;
+  border-radius: 25px;
+  // box-shadow: none !important;
+}
+
+
+.item-page{
+  border-radius: 0px !important;
+  ion-card{
+    border-radius: 0px !important;
+  }
+}
+
+
+.input-top-group {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid var(--ion-color-font);
+  .input-child-group {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0.5px solid var(--ion-color-font);
+  }
+}
+.inner-input-group {
+  border-radius: 50px;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid var(--ion-color-dark);
+}
+.input-group {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+}
+
+
+.btn-footer{
+  text-align: center;
+  min-height: 60px;
+  --background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ion-button{
+    width: 80%;
+    max-width: 450px;
+    height: 45px;
+  }
+  //white glass
+  background: rgba(244, 245, 248, 0.09);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1.6px);
+  -webkit-backdrop-filter: blur(1.6px);
+  border: 1px solid rgba(244, 245, 248, 0.15);
+
+  //blue glass
+  // background: rgba(56, 128, 255, 0.05);
+  // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  // backdrop-filter: blur(3px);
+  // -webkit-backdrop-filter: blur(3px);
+  // border: 1px solid rgba(56, 128, 255, 0.03);
+}
+
+.top-toolbar{
+  --background: transparent;
+  background-color: #fff;
+}
+
+
+
+@media only screen and (max-width: 991px) {
+  .mobile-media{
+    display: block;
+  }
+  .card-body{
+    width: 95%;
+    max-width: 680px;
+    margin: 20px auto;
+    border-radius: 25px;
+    // box-shadow: none !important;
+  }
+}
+
+
+.note{
+  background-color: #fff8e2;
+  border-inline-start: 9px solid #ffc409;
+  border-top: 0.2px solid #e9e9e9;
+  // border-radius: 8px;
+  padding: 5px 5px;
+  // width: 90%;
+  // max-width: 560px;
+  // margin: 16px auto 0px auto;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: pre-wrap;
+}
+

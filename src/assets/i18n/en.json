@@ -1,0 +1,386 @@
+{
+  "versionName": "0.0.12 ( Beta )",
+  "back": "Back",
+  "zoom-in": "Zoom In",
+  "zoom-out": "Zoom Out",
+  "next": "Next",
+  "language": "Display language",
+  "arabic": "العربية",
+  "english": "English",
+  "logout": "Logout",
+  "close": "Close",
+  "save": "Save",
+  "CANCEL": "Cancel",
+  "Take_Photo": "Take a photo",
+  "Choose_Photos": "Choose from photo album",
+  "Select_Source": "Select photo source",
+  "Delete_Photo": "Delete the photo",
+  "ok": "Ok",
+  "privacy": "Privacy Policy",
+  "terms": "Terms & Conditions",
+  "loading": "Loading...",
+  "select":"Select",
+
+  "ALERTS": {
+    "no": "No",
+    "yes" : "Yes",
+    "dismiss": "Dismiss",
+    "error": "Error",
+    "check_data": "Please Check Data.",
+    "done": "Successfully",
+    "done_edit": "The details has been successfully updated",
+    "done_add_address": "The title has been added successfully",
+    "try_again": "An error occurred, try again",
+    "loading": "Loading ...",
+    "update_status": "Updating data",
+    "done_update": "The details has been successfully updated",
+    "add_item": "The item has been successfully added",
+    "add_category": "The category has been successfully added",
+    "item_done_update": "The item details has been successfully updated",
+    "category_done_update": "The category details has been successfully updated",
+    "done_change": "Changes have been saved",
+    "done_add": "Adding completed",
+    "done_complete_order": "Order has been completed",
+    "code_error" : "Invalid code",
+    "login_failed": "Login failed",
+    "login_error": "Please check the data entered",
+    "user_not_active": "User not active",
+    "invalid_username_password": "Invalid email or password",
+    "success_register": "Request successfully sent",
+    "you_can_log_in": "You can log in now",
+    "company_not_found": "Undefined company",
+    "email_mobile_used": "Mobile number or Email already used",
+    "expired_request": "Expired request",
+    "expired_request_wrong_id": "No matching records found",
+    "expired_request_wrong_id_detail": "Sorry, your request has been rejected",
+    "expired_request_detail": "sorry, we couldn't complete your request. try again later",
+    "done_delete" : "Delete done",
+    "done_delete_item" : "the item has been deleted Successfully",
+    "confirmation": "Delete this item",
+    "confirmation_desc": "Are you sure you want to delete this item?",
+    "reject_request": "Reject this request",
+    "reject_request_desc": "Are you sure you want to reject this request?",
+    "required_fields": "Please complete all required fields",
+    "password_changed_Successfully": "Password changed Successfully",
+    "wrong_old_password": "Old password is incorrect",
+    "error_change_password": "Unable to reset password. Please try again later",
+    "password_not_match": "Password dosen't match",
+    "upload_cover" : "uploading your new cover image",
+    "upload_avatar" : "uploading your new logo image",
+    "check_users_data": "Please enter valid email and password"
+  },
+
+  "HOME": {
+    "login": "Login",
+    "Welcome": "Welcome,,",
+    "login_create": "Login or register to continue",
+    "paragraph": "create your QR Menu instead of 'physical menu' for more profits and less cost",
+    "register": "Register"
+  },
+
+
+  "LOGIN": {
+    "email": "Email",
+    "password": "Password"
+  },
+  "REGISTER": {
+    "email": "Email ( login info will be sent here )",
+    "name": "Owner name",
+    "cafe_name": "Cafe or Restaurants name",
+    "phone": "Owner phone number ( with Dialing code )",
+    "address": "Store Address"
+  },
+
+
+  "RESTAURANT": {
+    "meals": "Meals",
+    "drinks": "Drinks",
+    "desserts": "Desserts",
+    "hookahs": "Hookahs",
+    "oops": "Oops!",
+    "oops_desc": "there is nothing to show here, yet",
+    "follow_us": "Follow us",
+    "no_category": "No category"
+  },
+
+
+  "ITEMS": {
+    "not_avilable": "Not avilable"
+  },
+
+
+  "ABOUT": {
+    "about": "Qudsi Center",
+    "app_version": "App Version",
+    "developer": "App Developer",
+    "address": "Office location",
+    "address1": "Palestine - Hebron - Ein Sarah",
+    "address2": "Queen Plaza Hotel Building - First Floor",
+    "email": "Email",
+    "facebook" : "Facebook Page",
+    "contact_act": "Contact us"
+  },
+
+  "PANEL": {
+    "my_profile": "Manage profile",
+    "my_restaurant": "Store info",
+    "my_categories": "Categories",
+    "my_items": "Items",
+    "help": "Help",
+    "maual": "User manual",
+    "about": "About the app",
+    "privacy_policy": "Privacy policy",
+    "terms": "Terms of use / service",
+    "rate": "Rate the app",
+    "share": "Share the app",
+    "report": "Report a bug",
+    "service_type": "Version type",
+    "trial": "Trial version",
+    "basic": "basic version",
+    "premium": "Premium version",
+    "business": "Business version",
+    "service_period": "Period of service",
+    "days": "Day/s",
+    "end_today": "Ends today",
+    "expired": "Expired",
+    "account_request": "Account request",
+    "accounts": "Accounts"
+  },
+
+  "ADDITEM": {
+    "page_title": "Add new item",
+    "item_name": "Item name",
+    "item_name_desc": "Name displayed for customers",
+    "brand": "brand",
+    "brand_desc": "brand_desc",
+    "description": "Description (optional)",
+    "description_desc": "More detail about the product",
+    "price": "Price",
+    "price_desc": "original sales price for customer",
+    "currency": "Currency",
+    "currency_desc": "Currency symbol (NIS, $, JD, €) ",
+    "quantity": "quantity",
+    "quantity_desc": "quantity_desc",
+    "size": "Size (optional)",
+    "size_desc": "Large, 200g, Cup ",
+    "category": "Category",
+    "discount_price": "Discount price (optional)",
+    "discount_price_desc": "Discount price ( will cancel original sales price )",
+    "person_number": "Number of people (optional)",
+    "person_number_desc": "The number of people who serves by this meal",
+    "preparing_time": "Preparing time (min) (optional)",
+    "preparing_time_desc": "The time (in minutes) meal need to be Prepared",
+    "calories": "Calories",
+    "calories_desc": "The amount of calories inside this meal (optional)",
+    "min": "Min",
+    "person": "Person/people",
+    "kcal": "kcal"
+  },
+  "ADD_CATEGORY": {
+    "page_title": "Add new category",
+    "category_name": "Category name",
+    "category_name_desc": "Name displayed for customers",
+    "type": "Type",
+    "category_notes": "Category notes",
+    "category_notes_desc": "Will appear to customers on the Category items screen"
+  },
+
+  "CATEGORY_DETAIL": {
+    "page_name": "Category detail",
+    "category_name":"Category name",
+    "type":"Type",
+    "ref_category": "Category reference",
+    "manual_def": "Manually definition",
+    "create_at": "Create date"
+  },
+  "ITEM_DETAIL": {
+    "page_name": "Item detail",
+    "item_name":"Item name",
+    "price":"Price",
+    "discount_price":"Discount price",
+    "currency":"Currency",
+    "description":"Description",
+    "size":"Size",
+    "person_number":"Number of people",
+    "preparing_time":"Preparing time (min)",
+    "calories":"Calories",
+    "edit": "Edit",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "show": "Show",
+    "hide": "Hide",
+    "delete": "Delete",
+    "ref_item": "Item reference",
+    "create_at": "Create date",
+    "category": "Category",
+    "manual_def": "Manually definition"
+  },
+  "EDIT_CATEGORY": {
+    "page_name": "Edit category"
+  },
+  "EDIT_ITEM": {
+    "page_name": "Edit item"
+  },
+  "MY_CATEGORY": {
+    "page_name": "Categories",
+    "add_category": "Add category",
+    "reorder": "Reorder",
+    "import_category": "Import"
+  },
+  "MY_ITEMS": {
+    "page_name": "Items",
+    "status" : "Status",
+    "price": "Price",
+    "discount_price": "Price after discount ",
+    "old_price" : "Price before discount",
+    "filter": "Search & filters",
+    "all":"All",
+    "search": "Search",
+    "add_item": "Add item",
+    "reorder": "Reorder",
+    "import_item": "Import item"
+  },
+  "MY_PROFILE": {
+    "page_name": "Manage profile",
+    "change_password": "Change password",
+    "delete_account": "Delete account"
+  },
+  "MY_RESTAURANT": {
+    "page_name": "Store info",
+    "edit": "Edit info",
+    "public_view" : "Customers screen",
+    "qr_print": "Print QR Code"
+  },
+  "EDIT_CAFE": {
+    "page_name": "Edit info",
+    "name": "Store name",
+    "cafe_name_desc": "Name displayed for customers",
+    "phone": "Phone",
+    "phone_desc": "Phone number displayed for customers",
+    "address": "Address",
+    "address_desc": "Address displayed for customers",
+    "wifi": "WiFi",
+    "facebook": "Facebook (optional)",
+    "whatsapp": "WhatsApp (optional)",
+    "instagram": "Instagram (optional)",
+    "snapchat": "Snapchat (optional)",
+    "tiktok": "TikTok (optional)",
+    "website": "Website (optional)",
+    "facebook_desc": "Full link, example: https://www.facebook.com/actpsCo",
+    "whatsapp_desc": "international phone number without (+), example : 970594560918",
+    "instagram_desc": "Full link, example: https://www.instagram.com/actpsco",
+    "snapchat_desc": "Username without the (@), example: actpsco",
+    "tiktok_desc": "Username without the (@), example: actpsco",
+    "website_desc": "Full link, example: https://www.act.ps",
+    "wifi_desc": "WiFi network password",
+    "logo_pic": "Logo picture",
+    "cover_pic": "Cover picture"
+  },
+
+  "WEBSITE": {
+    "account": "User",
+    "motto": "With just a click of a button",
+    "contact" : "Contact us",
+    "demo" : "View demo",
+    "OUTLOOK_SECTION": {
+      "tilte" : "A Modern Outlook",
+      "subtitle": "You no longer need traditional menus!",
+      "paragraph": "Our digital menu service is a more convenient and affordable option to display your restaurant's food items. Your customers only have to scan your QR code to see your menu."
+    },
+    "FEATURES": {
+      "section_tilte": "features and benefits",
+      "web_tilte": "web service",
+      "web_paragraph": "Customers can see your menu on the browsers without downloading any apps.",
+      "edit_tilte": " Quickly editable",
+      "edit_paragraph": "Keep your menu up-to-date by editing it effortlessly on the spot.",
+      "touchless_tilte": "Digital menu",
+      "touchless_paragraph": " A digital replacement for traditional menus in a post-pandemic world.",
+      "star_tilte": "Remarkable impression",
+      "star_paragraph": "Our efficient and easy interface will leave a great impression on your customers.",
+      "note": "More features and benefits will be added soon, stay tuned."
+    },
+    "DISPLAY": {
+      "section_tilte": "Display your QR",
+      "section_paragraph": "These are some suggested places where you can display your QR code so your customers can easily see and scan it.",
+      "Table": "Table sticker",
+      "holder": "Menu holder",
+      "card": "Business card",
+      "door": "Store door"
+    },
+    "PRICING": {
+      "soon": "Coming soon",
+      "section_tilte": "pricing Plans",
+      "basic_tilte": "Basic",
+      "basic_period": "/ month",
+      "basic_first_feature": "Digital Menu with Unlimited categories & Items",
+      "basic_second_feature": "Admin privileges with control panel and dashboard",
+      "basic_third_feature": "Editing the Menu effortlessly and immediately",
+      "basic_fourth_feature": "Advanced meal settings",
+      "basic_fourth_feature_example": "(photo, ingredients, size, Kcal, etc)",
+      "basic_fifth_feature": "Multi platform viewer ",
+      "basic_fifth_feature_example": "(Mobile & Desktop, tablet, etc)",
+      "basic_sixth_feature": "Multi display language (English - Arabic)",
+      "basic_sixth_feature_example": "(More coming soon)",
+      "basic_seventh_feature": "Insert your store info and social media pages link",
+      "basic_note": "The above price include vat",
+      "trial": "Free trial",
+      "premium_tilte": "Premium",
+      "business_tilte": "Business"
+    },
+    "DIGITALIZE": {
+      "title": "Ready to Digitalize your business?",
+      "paragraph": "Go ahead and contact us to get your free trial now, no credit card required"
+    },
+    "FOOTER": {
+      "about": "About us",
+      "paragraph_first": "Artistic Code Technologies is a company established at the end of 2020 by a group of programmers and experts in the fields of programming and smart solutions.",
+      "paragraph_second": "The company aims at expanding and normalizing the use of modern software in various sectors of local and regional markets.",
+      "phone": "+970 (594) 560-918",
+      "address": "Queen plaza building - Ain Sarah Street, Hebron, 00712, Palestine",
+      "social": "Follow us",
+      "copy": "All rights reserved."
+    }
+  },
+  "CHANGE_PASSWORD": {
+    "page_title": "Change user password",
+    "old_password": "Old password ",
+    "new_password": "New password",
+    "confirmPassword": "confirm New password"
+  },
+  "REORDER": {
+    "categories": "Reorder categories",
+    "items": "Reorder items",
+    "select_category": "Select category",
+    "multi_notes": "Items with multiple categories can't be reorder, and will be hidden from this screen",
+    "multi_cat_item": "If multiple categories are selected, reorder this item will be disabled"
+  },
+  "DEFUALT": {
+    "defualt_category": "Default category",
+    "selected_category": "Selected category",
+    "defualt_item": "Default item",
+    "selected_item": "Selected item"
+  },
+  "IMPORT_CATEGORY": {
+    "page_title": "Import categories",
+    "empty_category_import": "Previously imported categories will be hidden from this screen"
+  },
+  "IMPORT_ITEM": {
+    "page_title": "Import items",
+    "empty": "There's no items to import",
+    "title": "Name",
+    "price": "Price",
+    "empty_item_import": "Previously imported items will be hidden from this screen"
+  },
+  "REF_ITEM": {
+    "page_title": "Reference item",
+    "ref_name": "Name",
+    "ref_category": "Category",
+    "ref_price": "Price"
+  },
+  "REF_CATEGORY": {
+    "page_title": "Reference category",
+    "ref_name": "Name",
+    "ref_type": "Type"
+  }
+
+}

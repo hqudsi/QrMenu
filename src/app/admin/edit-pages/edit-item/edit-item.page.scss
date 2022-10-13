@@ -1,0 +1,97 @@
+.back-btn-area{
+  max-width: 680px;
+    margin: auto;
+  }
+
+  .card-body{
+    max-width: 680px;
+    margin: 20px auto;
+    border-radius: 25px;
+    box-shadow: none !important;
+  }
+
+
+
+
+
+  .input-top-group {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid var(--ion-color-font);
+    .input-child-group {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 5px;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: 0.5px solid var(--ion-color-font);
+    }
+  }
+  .inner-input-group {
+    border-radius: 50px;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid var(--ion-color-dark);
+  }
+  .input-group {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+  }
+
+
+  .btn-footer{
+    text-align: center;
+    min-height: 60px;
+    --background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ion-button{
+      width: 80%;
+      max-width: 450px;
+      height: 45px;
+    }
+    //white glass
+    background: rgba(244, 245, 248, 0.09);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.6px);
+    -webkit-backdrop-filter: blur(1.6px);
+    border: 1px solid rgba(244, 245, 248, 0.15);
+
+    //blue glass
+    // background: rgba(56, 128, 255, 0.05);
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(3px);
+    // -webkit-backdrop-filter: blur(3px);
+    // border: 1px solid rgba(56, 128, 255, 0.03);
+  }
+
+  .top-toolbar{
+    --background: transparent;
+    background-color: #fff;
+  }
+
+  .note{
+    background-color: #fff8e2;
+    border-inline-start: 9px solid #ffc409;
+    border-top: 0.2px solid #e9e9e9;
+    // border-radius: 8px;
+    padding: 5px 5px;
+    // width: 90%;
+    // max-width: 560px;
+    // margin: 16px auto 0px auto;
+    color: #666666;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: pre-wrap;
+  }
+

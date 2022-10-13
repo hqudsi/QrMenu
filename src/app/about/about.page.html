@@ -1,0 +1,59 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <div class="flex-card ion-no-margin ion-no-padding">
+    <ion-card class="card-body ion-no-margin ion-no-padding">
+      <ion-toolbar color="#fff">
+        <ion-buttons slot="start" class="back-margin">
+          <ion-back-button text= '{{ "back" | translate }}' mode="ios"  class="header-back-button"  defaultHref="/"></ion-back-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-card-header class="ion-text-center ion-no-margin ion-no-padding ion-padding-bottom">
+          <div class="logo">
+              <ion-img src="../assets/applogo.png"></ion-img>
+          </div>
+        <br />
+        <ion-card-subtitle style="color:var(--ion-color-medium)">{{ "ABOUT.app_version" | translate }}</ion-card-subtitle>
+        <ion-card-title class="text-color">{{ "versionName" | translate }}</ion-card-title>
+      </ion-card-header>
+      </ion-card>
+      <ion-card class="card-body ion-no-margin ion-no-padding">
+      <ion-card-header class="ion-text-center">
+        <ion-card-subtitle style="color:var(--ion-color-medium)">{{ "ABOUT.developer" | translate }}</ion-card-subtitle>
+        <ion-img class="actLogo" src="assets/actLogo.png"></ion-img>
+        <p class="act_name">Artistic Code Technologies</p>
+        <ion-card-subtitle style="color:var(--ion-color-medium)">{{ "ABOUT.address" | translate }}</ion-card-subtitle>
+        <ion-card-title class="text-color">{{ "ABOUT.address1" | translate }}</ion-card-title>
+        <ion-card-title class="text-color">{{ "ABOUT.address2" | translate }}</ion-card-title>
+        <br />
+        <ion-card-subtitle style="color:var(--ion-color-medium)">{{ "ABOUT.contact_act" | translate }}</ion-card-subtitle>
+        <ion-grid style="max-width: 600px; margin: auto;" class="ion-no-margin ion-no-padding ion-padding-top">
+          <ion-row class="ion-no-margin ion-no-padding">
+            <ion-col class="ion-text-center ion-no-margin ion-no-padding" style="min-width:65px;height: 50px;">
+              <ion-button style="--color:light;" fill="clear" class="lang_class ion-no-margin ion-no-padding" href="https://api.whatsapp.com/send?phone=970594560918" target="_blank">
+                <ion-icon slot="icon-only" style="font-size:25px;" name="logo-whatsapp" color="light" class="ion-no-margin ion-no-padding whatsapp"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col class="ion-text-center ion-no-margin ion-no-padding" style="min-width:65px;height: 50px;">
+              <ion-button style="--color:light;" fill="clear" class="lang_class ion-no-margin ion-no-padding" href="mailto:info@act.ps" target="_blank">
+               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="36" height="36" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 193"><path d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455h40.727z" fill="#4285F4"/><path d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798v98.91z" fill="#34A853"/><path fill="#EA4335" d="M58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.67 34.992l-4.67 40.644L128 145.504z"/><path d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945l-16.292 12.218z" fill="#FBBC04"/><path d="M0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23v23.273z" fill="#C5221F"/></svg>
+              </ion-button>
+            </ion-col>
+            <ion-col class="ion-text-center ion-no-margin ion-no-padding" style="min-width:65px;height: 50px;">
+              <ion-button style="--color:light;" fill="clear" class="lang_class ion-no-margin ion-no-padding" href="https://facebook.com/actpsco" target="_blank">
+                <ion-icon slot="icon-only" style="font-size:36px;color:#3b5998;" name="logo-facebook" class="ion-no-margin ion-no-padding"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <!-- <ion-col class="ion-text-center ion-no-margin ion-no-padding" style="min-width:65px;height: 50px;">
+              <ion-button style="--color:light;" fill="clear" class="lang_class ion-no-margin ion-no-padding"  (click)="makeCall(0594560918)">
+                <ion-icon slot="icon-only" style="font-size:36px;color:rgb(34, 34, 34);" name="call-outline" class="ion-no-margin ion-no-padding"></ion-icon>
+              </ion-button>
+            </ion-col> -->
+          </ion-row>
+        </ion-grid>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
+</ion-content>

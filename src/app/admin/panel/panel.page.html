@@ -1,0 +1,138 @@
+<ion-header class="ion-no-border page-header">
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="panel-bg">
+
+  <ion-card class="logo-card">
+    <ion-img src="/assets/applogo.png"></ion-img>
+  </ion-card>
+
+  <!-- <ion-card class="social-div">
+    <div class="ion-text-center follow-text">{{ 'SETTINGS.follow_us' | translate }}</div>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center">
+          <ion-button style="--color:light;" fill="clear" class="lang_class" href="https://facebook.com/-------" target="_blank">
+            <ion-icon style="min-height: 36px;" slot="icon-only" style="font-size:40px;color:#3e5b9a;" name="logo-facebook" class="ion-no-margin ion-no-padding"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col  class="ion-text-center">
+          <ion-button style="--color:light;" fill="clear" class="lang_class" href="--------" target="_blank">
+            <ion-icon style="min-height: 36px;" slot="icon-only" style="font-size:30px;color:var(--ion-color-light);" name="logo-instagram" class="ion-no-margin ion-no-padding instagram"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col class="ion-text-center">
+          <ion-button style="--color:light;" fill="clear" class="lang_class" href="https://api.whatsapp.com/send?phone=970******" target="_blank">
+            <ion-icon style="min-height: 36px;" slot="icon-only" style="font-size:25px;color:var(--ion-color-light);" name="logo-whatsapp" class="ion-no-margin ion-no-padding whatsapp"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card> -->
+
+  <ion-card class="account-details-header white-card">
+    <ion-card-content>
+
+      <ion-list>
+
+        <ion-item lines="full" class="review-item" [routerLink]="['/admin/my-restaurant']" button detail>
+          <ion-icon style="min-height: 36px;" size="large" class="gray_text" name="storefront-outline" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.my_restaurant' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" [routerLink]="['/admin/my-categories']" button detail>
+          <ion-icon style="min-height: 36px;" size="large" class="gray_text" name="grid-outline" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.my_categories' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" [routerLink]="['/admin/my-items']" button detail>
+          <ion-icon style="min-height: 36px;" size="large" class="gray_text" name="fast-food-outline" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.my_items' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" [routerLink]="['/my-profile']" button detail>
+          <ion-icon style="min-height: 36px;" size="large" class="gray_text" name="person-outline" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.my_profile' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" detail="true" href="https://drive.google.com/file/d/1xHAJ5d9fs2oY4SilUubl6qpTMAkUuDIM/view?usp=sharingd" target="_blank">
+          <ion-icon style="font-size: 29px; min-height: 36px;" class="gray_text" name="book-outline" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.maual' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" detail="true" href="https://api.whatsapp.com/send?phone=970594560918" target="_blank">
+          <ion-icon style="font-size: 29px; min-height: 36px;" class="gray_text" name="logo-whatsapp" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.help' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" button [routerLink]="['/privacy']" detail>
+          <ion-icon style="min-height: 36px;" size="large" class="gray_text" name="shield-half" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.privacy_policy' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" button [routerLink]="['/terms']" detail>
+          <ion-icon style="min-height: 36px;" size="large" class="gray_text" name="document-text-outline" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.terms' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" button [routerLink]="['/about']" detail>
+          <ion-icon style="min-height: 36px;" size="large" class="gray_text" name="information-circle-outline" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.about' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="none" class="review-item">
+          <ion-icon size="large" class="gray_text" name="earth" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'language' | translate }}</ion-label>
+          <ion-select class="gray_text" [value]="currenctLanguage" (ionChange)="languageChange($event)" mode="ios" interface="action-sheet">
+            <ion-select-option style="color:#000" value="en">{{ 'english' | translate }}</ion-select-option>
+            <ion-select-option value="ar">{{ 'arabic' | translate }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+    </ion-card-content>
+    <ion-grid class="buttons-grid">
+      <ion-row>
+        <ion-col class="button-col">
+          <ion-button color="danger" expand="full" (click)="logout()">
+            <ion-icon style="min-height: 36px;" size="large" color="light" name="log-out-outline" slot="start"></ion-icon>
+            {{ 'logout' | translate }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <div class="version">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p style="color:var(--ion-color-medium)" class="ion-no-margin ion-no-padding">{{ "ABOUT.app_version" | translate }}</p>
+          <p class="text-color ion-no-margin ion-no-padding">{{ "versionName" | translate }}</p>
+        </ion-col>
+        <ion-col>
+          <p style="color:var(--ion-color-medium)" class="ion-no-margin ion-no-padding">{{ "PANEL.service_type" | translate }}</p>
+          <p *ngIf="!cafeData?.version_type" class="ion-no-margin ion-no-padding">
+            <ion-spinner class="ion-no-margin ion-no-padding" name="crescent"></ion-spinner>
+            <ion-label style="vertical-align: super; padding-inline-start:5px;">{{ "loading" | translate }}</ion-label>
+          </p>
+          <p *ngIf="cafeData?.version_type" class="text-color ion-no-margin ion-no-padding">{{ "PANEL." + cafeData?.version_type | translate }}</p>
+        </ion-col>
+        <ion-col>
+          <p style="color:var(--ion-color-medium)" class="ion-no-margin ion-no-padding">{{ "PANEL.service_period" | translate }}</p>
+          <p *ngIf="!cafeData?.end_date" class="ion-no-margin ion-no-padding">
+            <ion-spinner  class="ion-no-margin ion-no-padding" name="crescent"></ion-spinner>
+            <ion-label style="vertical-align: super; padding-inline-start:5px;">{{ "loading" | translate }}</ion-label>
+          </p>
+          <p *ngIf="cafeData?.end_date && days > 5" class="text-color ion-no-margin ion-no-padding">{{ days | number:'1.0-0' }} {{ "PANEL.days" | translate }}</p>
+          <p *ngIf="cafeData?.end_date && days <= 5 && days > 0 " class="text-color-danger ion-no-margin ion-no-padding">{{ days | number:'1.0-0' }} {{ "PANEL.days" | translate }}</p>
+          <p *ngIf="cafeData?.end_date && days == 0" class="text-color-danger ion-no-margin ion-no-padding">{{ "PANEL.end_today" | translate }}</p>
+          <p *ngIf="cafeData?.end_date && days < 0" class="text-color-danger ion-no-margin ion-no-padding">{{ "PANEL.expired" | translate }}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="end-page"></div>
+</ion-content>

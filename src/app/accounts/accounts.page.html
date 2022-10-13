@@ -1,0 +1,24 @@
+<ion-header mode="ios">
+  <ion-toolbar style="--background:#fff;">
+    <div class="back-btn-area">
+      <ion-buttons slot="start">
+        <ion-back-button text= '{{ "back" | translate }}' mode="ios"  class="header-back-button"  defaultHref="/"></ion-back-button>
+        <ion-title mode="ios">{{ 'PANEL.accounts' | translate }}</ion-title>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let user of users">
+    <ion-item>
+      <ion-label>
+       {{ user.email }}
+      </ion-label>
+      <ion-label>
+       {{ user.password }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

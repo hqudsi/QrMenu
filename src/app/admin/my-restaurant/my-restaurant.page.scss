@@ -1,0 +1,119 @@
+.back-btn-area{
+  max-width: 680px;
+    margin: auto;
+  }
+
+
+
+  .cover-profile{
+    overflow: hidden;
+    height: 160px;
+    position: relative;
+  }
+
+  .cover{
+    position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+  }
+
+  .avatar{
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    .avatar-img{
+      display: flex;
+      object-fit: cover;
+      object-position: center center;
+      background: #fff;
+      margin-top: -40px;
+      position: relative;
+      border-radius: 100%;
+      width: 90px;
+      height: 90px;
+      overflow: hidden;
+      box-shadow: var(--shadow-2);
+    }
+  }
+
+  .card-body{
+    max-width: 680px;
+    margin: -30px auto 0px auto;
+    border-radius: 25px;
+    // border-radius: 25px;
+    // box-shadow: none !important;
+  }
+
+  .card-body-list{
+    max-width: 680px;
+    margin: 30px auto;
+    border-radius: 15px;
+    // border-radius: 25px;
+    // box-shadow: none !important;
+  }
+
+  .review-item {
+    --padding-start: 16px;
+    --min-height: 35px !important;
+    display: contents;
+    ion-label {
+      margin: 0px 0px 0px !important;
+    }
+  }
+
+
+
+  .store-name{
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .store-info{
+    font-size: 14px;
+    color:#989898
+  }
+
+    .home-btn{
+      margin: 0px;
+      padding: 0px;
+      font-size:16px;
+      font-weight: 600;
+      letter-spacing: 0px;
+      height: 60px;
+      --box-shadow:none;
+      border-top:2px solid var(--ion-color-light);
+      text-transform: capitalize;
+    }
+
+    .list-content{
+      padding: 0px 0px 0px 0px;
+      padding-top: 0px;
+      ion-label{
+
+        font-size: 15px !important;
+      }
+    }
+
+    ion-list{
+      padding: 0px;
+      background-color: transparent;
+    }
+
+    ion-card{
+      // width: 90%;
+      margin: 10px auto;
+    }
+
+    .dark_text{
+      color: #363636 !important;
+      --color: #363636 !important;
+    }

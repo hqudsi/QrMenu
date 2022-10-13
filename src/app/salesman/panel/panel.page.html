@@ -1,0 +1,73 @@
+<ion-header class="ion-no-border page-header">
+</ion-header>
+<ion-content [fullscreen]="true">
+
+  <ion-card class="logo-card">
+    <ion-img src="/assets/applogo.png"></ion-img>
+  </ion-card>
+
+  <ion-card class="account-details-header white-card">
+    <ion-card-content>
+
+      <ion-list>
+        <ion-item lines="full" class="review-item" [routerLink]="['/my-profile']" button detail>
+          <ion-icon style="min-height: 36px;" size="large" class="gray_text" name="person-outline" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.my_profile' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" detail="true" href="https://api.whatsapp.com/send?phone=970594560918">
+          <ion-icon style="font-size: 29px; min-height: 36px;" class="gray_text" name="logo-whatsapp" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.help' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" button [routerLink]="['/about']" detail>
+          <ion-icon style="min-height: 36px;" size="large" class="gray_text" name="information-circle-outline" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.about' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" button [routerLink]="['/privacy']" detail>
+          <ion-icon style="min-height: 36px;" size="large" class="gray_text" name="shield-half" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.privacy_policy' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" button [routerLink]="['/terms']" detail>
+          <ion-icon style="min-height: 36px;" size="large" class="gray_text" name="document-text-outline" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'PANEL.terms' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="none" class="review-item">
+          <ion-icon size="large" class="gray_text" name="earth" slot="start"></ion-icon>
+          <ion-label class="gray_text">{{ 'language' | translate }}</ion-label>
+          <ion-select class="gray_text" [value]="currenctLanguage" (ionChange)="languageChange($event)" mode="ios" interface="action-sheet">
+            <ion-select-option style="color:#000" value="en">{{ 'english' | translate }}</ion-select-option>
+            <ion-select-option value="ar">{{ 'arabic' | translate }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+    </ion-card-content>
+    <ion-grid class="buttons-grid">
+      <ion-row>
+        <ion-col class="button-col">
+          <ion-button color="danger" expand="full" (click)="logout()">
+            <ion-icon style="min-height: 36px;" size="large" color="light" name="log-out-outline" slot="start"></ion-icon>
+            {{ 'logout' | translate }}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <div class="version">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <p style="color:var(--ion-color-medium)" class="ion-no-margin ion-no-padding">{{ "ABOUT.app_version" | translate }}</p>
+          <p class="text-color ion-no-margin ion-no-padding">{{ "versionName" | translate }}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="end-page"></div>
+</ion-content>

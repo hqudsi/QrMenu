@@ -1,0 +1,83 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content>
+  <div class="background-cafe-img"></div>
+
+  <div class="flex-card ion-no-margin ion-no-padding">
+    <ion-card class="card-body ion-no-margin ion-no-padding">
+
+      <ion-toolbar color="light">
+        <ion-buttons slot="start" class="back-margin">
+          <ion-back-button text= '{{ "back" | translate }}' mode="ios"  class="header-back-button"  defaultHref="/"></ion-back-button>
+        </ion-buttons>
+      </ion-toolbar>
+
+
+          <form [formGroup]="credentials" class="input-form">
+
+            <div class="input-user">
+              <ion-item color="light" lines="none">
+                <ion-icon style="color:#a5a5a8" class="ion-padding-end" name="storefront-outline"></ion-icon>
+                <ion-input formControlName="cafe_name" type="text" name="cafe_name" minlength="3" placeholder="{{ 'REGISTER.cafe_name' | translate }}" required></ion-input>
+              </ion-item>
+              <div *ngIf="(credentials.get('cafe_name').dirty || credentials.get('cafe_name').touched)
+                        && !credentials.get('cafe_name').valid" class="errors">
+              </div>
+            </div>
+
+            <div class="input-user">
+              <ion-item color="light" lines="none">
+                <ion-icon style="color:#a5a5a8" class="ion-padding-end" name="location-outline"></ion-icon>
+                <ion-input formControlName="address" type="text" name="address" minlength="3" placeholder="{{ 'REGISTER.address' | translate }}" required></ion-input>
+              </ion-item>
+              <div *ngIf="(credentials.get('address').dirty || credentials.get('address').touched)
+                        && !credentials.get('address').valid" class="errors">
+              </div>
+            </div>
+
+            <div class="input-user">
+              <ion-item color="light" lines="none">
+                <ion-icon style="color:#a5a5a8" class="ion-padding-end" name="person-outline"></ion-icon>
+                <ion-input formControlName="name" type="text" name="name" minlength="3" placeholder="{{ 'REGISTER.name' | translate }}" required></ion-input>
+              </ion-item>
+              <div *ngIf="(credentials.get('name').dirty || credentials.get('name').touched)
+                        && !credentials.get('name').valid" class="errors">
+              </div>
+            </div>
+
+            <div class="input-user">
+              <ion-item color="light" lines="none">
+                <ion-icon style="color:#a5a5a8" class="ion-padding-end" name="mail-outline"></ion-icon>
+                <ion-input formControlName="email" type="email" name="email" placeholder="{{ 'REGISTER.email' | translate }}" required></ion-input>
+              </ion-item>
+              <div *ngIf="(credentials.get('email').dirty || credentials.get('email').touched)
+                        && !credentials.get('email').valid" class="errors">
+              </div>
+            </div>
+
+
+            <div class="input-user">
+              <ion-item color="light" lines="none">
+                <ion-icon style="color:#a5a5a8" class="ion-padding-end" name="call-outline"></ion-icon>
+                <ion-input formControlName="phone" type="tel" minlength="10" maxlength="13" name="phone" placeholder="{{ 'REGISTER.phone' | translate }}" required></ion-input>
+              </ion-item>
+              <div *ngIf="(credentials.get('phone').dirty || credentials.get('phone').touched)
+                        && !credentials.get('phone').valid" class="errors">
+              </div>
+            </div>
+
+          </form>
+
+        <div class="ion-no-margin ion-no-padding">
+          <ion-button (click)="register()" style="height: 60px;" class="ion-no-margin ion-no-padding" type="submit" size="large" expand="full" fill="solid" color="primary">{{ 'HOME.register' | translate }}</ion-button>
+        </div>
+    </ion-card>
+  <ion-card>
+
+  </ion-card>
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "qrmenu-act": {
+      "hosting": {
+        "app": [
+          "qrmenu-act"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "qrmenu-act"
+  }
+}

@@ -1,0 +1,87 @@
+<ion-header mode="ios">
+  <ion-toolbar style="--background:#fff;">
+    <div class="back-btn-area">
+      <ion-buttons slot="start">
+        <ion-back-button text= '{{ "back" | translate }}' mode="ios"  class="header-back-button"  defaultHref="/"></ion-back-button>
+        <ion-title mode="ios">{{ 'MY_RESTAURANT.page_name' | translate }}</ion-title>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="cover-profile">
+    <ion-skeleton-text *ngIf="!cafeData" animated style="width: 100%;margin: auto;height: 100%;"></ion-skeleton-text>
+    <div class="cover" [ngStyle]="{'background-image': 'url(' + cafeData?.cover_url + ')'}" *ngIf="cafeData?.cover_url"></div>
+    <div class="cover" [ngStyle]="{'background-image': 'url(../assets/img/blank-cover.png)'}" *ngIf="!cafeData?.cover_url"></div>
+    <div class="avatar">
+      <ion-img class="avatar-img" [src]="cafeData?.avatar_url" *ngIf="cafeData?.avatar_url"></ion-img>
+      <ion-img class="avatar-img" src="/assets/img/blank-profile.png" *ngIf="!cafeData?.avatar_url"></ion-img>
+    </div>
+  </div>
+
+
+  <ion-card class="card-body">
+    <ion-card-header class="cafe-header">
+      <ion-skeleton-text *ngIf="!cafeData" animated style="width: 60%;margin: auto;height: 30px;"></ion-skeleton-text>
+      <ion-card-title *ngIf="cafeData" class="store-name">{{ cafeData?.name }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content class="ion-no-padding">
+      <ion-grid class="info-grid">
+        <ion-row style="width: fit-content; margin: auto; max-width: 275px;">
+          <ion-col class="ion-no-padding ion-no-margin">
+            <ion-item lines="none" class="ion-no-padding ion-no-margin">
+              <ion-icon style="color:#989898; padding-inline-end: 5px;" name="location-outline"></ion-icon>
+              <ion-skeleton-text *ngIf="!cafeData" animated style="width: 100px;margin: auto;height: 30px;"></ion-skeleton-text>
+              <ion-label class="store-info ion-text-wrap">{{ cafeData?.address }}</ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row  style="width: fit-content; margin: auto; max-width: 300px;">
+          <ion-col class="ion-no-padding ion-no-margin">
+            <ion-item lines="none" class="ion-no-padding ion-no-margin">
+              <ion-icon style="color:#989898; padding-inline-end: 4px;" name="call-outline"></ion-icon>
+              <ion-skeleton-text *ngIf="!cafeData" animated style="width: 80px;margin: auto;height: 30px;"></ion-skeleton-text>
+              <ion-label class="store-info ion-text-wrap">{{ cafeData?.phone }}</ion-label>
+            </ion-item>
+          </ion-col>
+          <ion-col class="ion-no-padding ion-no-margin">
+            <ion-item lines="none" class="ion-no-padding ion-no-margin">
+              <ion-icon style="color:#989898; padding-inline-end: 4px;"name="wifi-outline"></ion-icon>
+              <ion-skeleton-text *ngIf="!cafeData" animated style="width: 80px;margin: auto;height: 30px;"></ion-skeleton-text>
+              <ion-label class="store-info ion-text-wrap">{{ cafeData?.wifi }}</ion-label>
+            </ion-item>
+          </ion-col>
+          </ion-row>
+      </ion-grid>
+    </ion-card-content>
+    <ion-card-content class="ion-no-margin ion-no-padding">
+      <ion-grid class="ion-no-margin ion-no-padding">
+        <ion-row class="ion-no-margin ion-no-padding">
+          <ion-col>
+            <ion-button fill="clear" class="home-btn" Expand="full" (click)="editRestaurant()">{{ 'MY_RESTAURANT.edit' | translate }}</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card  class="card-body-list">
+    <ion-card-content class="list-content">
+      <ion-list>
+        <!-- <ion-item lines="full" class="review-item" href="`/restaurant/{{ cafeData?.id }}`" button detail target="_blank"> -->
+        <ion-item lines="full" class="review-item" href="/restaurant/{{ cafeData?.id }}" button detail target="_blank">
+          <ion-icon style="min-height: 36px;" size="large" class="dark_text" name="eye-outline" slot="start"></ion-icon>
+          <ion-label class="dark_text">{{ 'MY_RESTAURANT.public_view' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-item lines="full" class="review-item" (click)="printQr()" button detail>
+          <ion-icon style="min-height: 36px;" size="large" class="dark_text" name="qr-code-outline" slot="start"></ion-icon>
+          <ion-label class="dark_text">{{ 'MY_RESTAURANT.qr_print' | translate }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

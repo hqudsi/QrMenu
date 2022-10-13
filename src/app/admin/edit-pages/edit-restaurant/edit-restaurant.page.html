@@ -1,0 +1,150 @@
+<ion-header mode="ios">
+  <ion-toolbar style="--background:#fff;">
+    <div class="back-btn-area">
+      <ion-buttons slot="start">
+        <ion-back-button text= '{{ "back" | translate }}' mode="ios"  class="header-back-button"  defaultHref="/"></ion-back-button>
+        <ion-title mode="ios">{{ 'EDIT_CAFE.page_name' | translate }} : {{ cafeData?.name }}</ion-title>
+      </ion-buttons>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card class="card-body">
+
+
+    <ion-card-content class="ion-no-margin ion-no-padding ion-padding-top ion-padding-bottom">
+      <form [formGroup]="credentials">
+
+        <div class="input-group">
+          <ion-item lines="none">
+            <ion-label position="fixed">{{ 'EDIT_CAFE.name' | translate }}</ion-label>
+            <ion-input formControlName="name" type="text" name="name" placeholder="{{ 'EDIT_CAFE.cafe_name_desc' | translate }}" required></ion-input>
+          </ion-item>
+          <div *ngIf="(credentials.get('name').dirty || credentials.get('name').touched)
+                    && credentials.get('name').errors" class="errors">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <ion-item lines="none">
+            <ion-label position="fixed">{{ 'EDIT_CAFE.phone' | translate }}</ion-label>
+            <ion-input formControlName="phone" type="text" name="phone" placeholder="{{ 'EDIT_CAFE.phone_desc' | translate }}" required></ion-input>
+          </ion-item>
+          <div *ngIf="(credentials.get('phone').dirty || credentials.get('phone').touched)
+                    && credentials.get('phone').errors" class="errors">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <ion-item lines="none">
+            <ion-label position="fixed">{{ 'EDIT_CAFE.address' | translate }}</ion-label>
+            <ion-textarea formControlName="address" type="text" name="address" placeholder="{{ 'EDIT_CAFE.address_desc' | translate }}" required></ion-textarea>
+          </ion-item>
+          <div *ngIf="(credentials.get('address').dirty || credentials.get('address').touched)
+                    && credentials.get('address').errors" class="errors">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <ion-item lines="none">
+            <ion-label position="fixed">{{ 'EDIT_CAFE.wifi' | translate }}</ion-label>
+            <ion-input formControlName="wifi" type="text" name="wifi" placeholder="{{ 'EDIT_CAFE.wifi_desc' | translate }}" required></ion-input>
+          </ion-item>
+          <div *ngIf="(credentials.get('wifi').dirty || credentials.get('wifi').touched)
+                    && credentials.get('wifi').errors" class="errors">
+          </div>
+        </div>
+<!---->
+
+        <div class="input-group">
+          <ion-item lines="none">
+            <ion-label position="fixed">{{ 'EDIT_CAFE.website' | translate }}</ion-label>
+            <ion-input formControlName="website" type="text" name="website" placeholder="{{ 'EDIT_CAFE.website_desc' | translate }}"></ion-input>
+          </ion-item>
+          <div *ngIf="(credentials.get('website').dirty || credentials.get('website').touched)
+                    && credentials.get('website').errors" class="errors">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <ion-item lines="none">
+            <ion-label position="fixed">{{ 'EDIT_CAFE.facebook' | translate }}</ion-label>
+            <ion-input formControlName="facebook" type="text" name="facebook" placeholder="{{ 'EDIT_CAFE.facebook_desc' | translate }}"></ion-input>
+          </ion-item>
+          <div *ngIf="(credentials.get('facebook').dirty || credentials.get('facebook').touched)
+                    && credentials.get('facebook').errors" class="errors">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <ion-item lines="none">
+            <ion-label position="fixed">{{ 'EDIT_CAFE.instagram' | translate }}</ion-label>
+            <ion-input formControlName="instagram" type="text" name="instagram" placeholder="{{ 'EDIT_CAFE.instagram_desc' | translate }}"></ion-input>
+            </ion-item>
+            <div *ngIf="(credentials.get('instagram').dirty || credentials.get('instagram').touched)
+                      && credentials.get('instagram').errors" class="errors">
+            </div>
+          </div>
+
+        <div class="input-group">
+          <ion-item lines="none">
+            <ion-label position="fixed">{{ 'EDIT_CAFE.whatsapp' | translate }}</ion-label>
+            <ion-input formControlName="whatsapp" type="number" name="whatsapp" placeholder="{{ 'EDIT_CAFE.whatsapp_desc' | translate }}"></ion-input>
+          </ion-item>
+          <div *ngIf="(credentials.get('whatsapp').dirty || credentials.get('whatsapp').touched)
+          && credentials.get('whatsapp').errors" class="errors">
+        </div>
+      </div>
+
+
+        <div class="input-group">
+          <ion-item lines="none">
+            <ion-label position="fixed">{{ 'EDIT_CAFE.snapchat' | translate }}</ion-label>
+            <ion-input formControlName="snapchat" type="text" name="snapchat" placeholder="{{ 'EDIT_CAFE.snapchat_desc' | translate }}"></ion-input>
+          </ion-item>
+          <div *ngIf="(credentials.get('snapchat').dirty || credentials.get('snapchat').touched)
+                    && credentials.get('snapchat').errors" class="errors">
+          </div>
+        </div>
+
+        <div class="input-group">
+          <ion-item lines="none">
+            <ion-label position="fixed">{{ 'EDIT_CAFE.tiktok' | translate }}</ion-label>
+            <ion-input formControlName="tiktok" type="text" name="tiktok" placeholder="{{ 'EDIT_CAFE.tiktok_desc' | translate }}"></ion-input>
+          </ion-item>
+          <div *ngIf="(credentials.get('tiktok').dirty || credentials.get('tiktok').touched)
+                    && credentials.get('tiktok').errors" class="errors">
+          </div>
+        </div>
+<!---->
+
+      </form>
+      <div class="profilepic-border ion-no-margin ion-no-padding" style="text-align: -webkit-center !important;">
+        <p class="pic-header">{{ 'EDIT_CAFE.logo_pic' | translate }}</p>
+        <div class="insidepic">
+          <ion-img id="profile" *ngIf="cafeData?.avatar_url || avatarDataSource" (click)="selectAvatar()" [src]="avatarDataSource"></ion-img>
+        </div>
+        <ion-button fill="solid" class="profilebutton ion-no-margin ion-no-padding" Expand="block" (click)="selectAvatar()">
+          <ion-icon color="primary" name="camera"></ion-icon>
+        </ion-button>
+      </div>
+
+      <div class="profilepic-border ion-no-margin ion-no-padding" style="text-align: -webkit-center !important; margin-top: 30px; margin-bottom: 20px;">
+        <p class="pic-header">{{ 'EDIT_CAFE.cover_pic' | translate }}</p>
+        <div class="insidepic-cover">
+          <ion-img id="cover" *ngIf="cafeData?.cover_url || coverDataSource" (click)="selectCover()" [src]="coverDataSource"></ion-img>
+        </div>
+        <ion-button fill="solid" class="profilebutton-cover ion-no-margin ion-no-padding" Expand="block" (click)="selectCover()">
+          <ion-icon color="primary" name="camera"></ion-icon>
+        </ion-button>
+      </div>
+
+      </ion-card-content>
+      <div class="ion-no-margin ion-no-padding">
+        <ion-button (click)="editData()" style="height: 60px;" class="ion-no-margin ion-no-padding" type="submit" size="large" expand="full" fill="solid" color="primary">{{ 'save' | translate }}</ion-button>
+      </div>
+  </ion-card>
+
+</ion-content>
